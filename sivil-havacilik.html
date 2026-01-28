@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sivil Havacılık - Hidromod</title>
+        <link rel="icon" type="image/png" href="/hidromod_logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body style="background-color: #141d39 !important;">
+        <!-- Navbar -->
+        <nav
+            class="fixed top-0 left-0 right-0 z-50"
+            style="
+                background: rgba(20, 29, 57, 0.85);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(0, 161, 224, 0.2);
+                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+            "
+        >
+            <div
+                class="max-w-7xl mx-auto px-8 py-3.5 flex items-center justify-between"
+            >
+                <!-- Logo -->
+                <a href="/index.html" class="flex items-center gap-4">
+                    <img
+                        src="/hidromod_logo.png"
+                        alt="Hidromod Logo"
+                        class="h-12 w-auto"
+                    />
+                    <div class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-3.5">
+                        <div
+                            class="text-lg font-bold leading-none tracking-tight text-white"
+                        >
+                            <span>HIDRO</span><span>MOD</span>
+                        </div>
+                        <p
+                            class="text-[10px] text-gray-300 mt-1 leading-tight max-w-[180px]"
+                        >
+                            Hidrometeorolojik Tahmin & Analiz Merkezi
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Navigation Items & Actions -->
+                <div class="flex items-center gap-12 ml-auto">
+                    <!-- Navigation Links -->
+                    <nav class="hidden lg:flex items-center gap-10">
+                        <!-- Home -->
+                        <a
+                            href="/index.html#home"
+                            class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
+                        >
+                            Ana Sayfa
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"></span>
+                        </a>
+
+                        <!-- Solutions Dropdown -->
+                        <div class="relative group">
+                            <button
+                                class="text-white hover:text-[#00a1e0] transition-all duration-200 flex items-center gap-1.5 font-medium text-sm relative"
+                            >
+                                <span>Çözümler</span>
+                                <svg
+                                    class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="2.5"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19 9l-7 7-7-7"
+                                    ></path>
+                                </svg>
+                            </button>
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute top-full left-0 mt-3 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
+                            >
+                                <a
+                                    href="/hava-durumu.html"
+                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] first:rounded-t-xl font-medium"
+                                    >Hava Durumu</a
+                                >
+                                <a
+                                    href="/sivil-havacilik.html"
+                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                    >Sivil Havacılık</a
+                                >
+                                <a
+                                    href="/askeri-hava-tahmini.html"
+                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                    >Askeri Hava Tahmini
+                                </a>
+                                <a
+                                    href="/yenilenebilir-enerji.html"
+                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                    >Yenilenebilir Enerji</a
+                                >
+                                <a
+                                    href="/tarim.html"
+                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                    >Tarım</a
+                                >
+                                <a
+                                    href="/afet-tahmini.html"
+                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                    >Afet Riski ve Tahmini</a
+                                >
+                                <a
+                                    href="/iklim-degisikligi.html"
+                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] last:rounded-b-xl font-medium"
+                                    >İklim Değişikliği Simülasyonları</a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Our Data -->
+                        <a
+                            href="/index.html#data"
+                            class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
+                        >
+                            Verilerimiz
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"></span>
+                        </a>
+
+                        <!-- About -->
+                        <a
+                            href="/index.html#about"
+                            class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
+                        >
+                            Hakkımızda
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"></span>
+                        </a>
+
+                        <!-- Contact Us Button -->
+                        <a
+                            href="/index.html#contact"
+                            class="relative bg-gradient-to-r from-[#00a1e0] to-[#0088c7] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-[#00a1e0]/30 transition-all duration-300 hover:scale-105"
+                        >
+                            İletişim
+                        </a>
+                    </nav>
+
+                    <!-- Language Switcher -->
+                    <div
+                        class="flex items-center gap-1 bg-white/5 backdrop-blur-sm border border-[#00a1e0]/30 rounded-lg p-1"
+                    >
+                        <button
+                            class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-3 py-1.5 rounded-md transition-all duration-200 active-lang"
+                            data-lang="en"
+                        >
+                            EN
+                        </button>
+                        <button
+                            class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-3 py-1.5 rounded-md transition-all duration-200"
+                            data-lang="tr"
+                        >
+                            TR
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white" id="mobile-menu-btn">
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Video -->
+        <section class="relative overflow-hidden" style="height: 75vh; min-height: 500px;">
+            <!-- Video Background -->
+            <video
+                autoplay
+                loop
+                muted
+                playsinline
+                class="absolute top-0 left-0 w-full h-full object-cover"
+            >
+                <source src="/sivil.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Subtle overlay for text readability -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40"></div>
+
+            <!-- Content -->
+            <div class="relative h-full flex items-center justify-center">
+                <div class="max-w-4xl mx-auto px-8 text-center">
+                    <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                        Sivil Havacılık
+                    </h1>
+                    <p class="text-xl lg:text-2xl text-white leading-relaxed drop-shadow-lg">
+                        Hava güvenliği ve uçuş operasyonları için yüksek çözünürlüklü meteorolojik tahmin ve analiz hizmetleri
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Key Features Section -->
+        <section class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Hizmetlerimiz</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Havacılık güvenliği için özel meteorolojik çözümler
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="group p-8 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100">
+                        <div class="w-14 h-14 bg-[#00a1e0] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                            Rüzgar Tahminleri
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            Yüksek çözünürlüklü rüzgar hızı, yönü ve türbülans tahminleri ile güvenli uçuş planlaması
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div
+                        class="group p-8 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100"
+                    >
+                        <div class="w-14 h-14 bg-[#00a1e0] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <div
+                                class=""
+                            >
+                                <svg
+                                    class="w-7 h-7 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                                Operasyonel Meteoroloji
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Hava güvenliği için kritik meteorolojik bilgiler ve
+                            erken uyarı sistemleri
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div
+                        class="group p-8 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 border border-gray-100"
+                    >
+                        <div class="w-14 h-14 bg-[#00a1e0] rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <div
+                                class=""
+                            >
+                                <svg
+                                    class="w-7 h-7 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                                Risk Analizi
+                            </h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed">
+                            Model destekli trend ve kümülatif risk
+                            değerlendirmeleri
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section
+            class="relative py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50"
+        >
+            <div class="max-w-6xl mx-auto px-8">
+                <h2 class="text-5xl font-bold text-gray-900 mb-16 text-center">
+                    Teknik Detaylar
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <!-- Detail Item 1 -->
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-[#296a91] hover:shadow-2xl transition-all duration-300"
+                    >
+                        <div class="flex items-start gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-[#296a91] to-[#00a1e0] rounded-xl flex items-center justify-center flex-shrink-0"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 flex-1">
+                                Uçuş Öncesi Brifing
+                            </h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Rota boyunca detaylı hava durumu tahminleri, kritik
+                            seviyeler için rüzgar ve sıcaklık profilleri, görüş
+                            mesafesi ve bulut tabanı bilgileri.
+                        </p>
+                    </div>
+
+                    <!-- Detail Item 2 -->
+                    <div
+                        class="bg-white rounded-2xl p-8 shadow-xl border-t-4 border-[#296a91] hover:shadow-2xl transition-all duration-300"
+                    >
+                        <div class="flex items-start gap-4 mb-4">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-[#296a91] to-[#00a1e0] rounded-xl flex items-center justify-center flex-shrink-0"
+                            >
+                                <svg
+                                    class="w-6 h-6 text-white"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 flex-1">
+                                Havalimanı Meteorolojisi
+                            </h3>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Pist rüzgar tahminleri, görüş mesafesi ve tavan
+                            yüksekliği, yağış türü ve yoğunluğu, wind shear ve
+                            mikroburst erken uyarıları.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Application Areas - Full Width -->
+                <div
+                    class="bg-gradient-to-br from-[#296a91] to-[#1e3a5f] rounded-2xl p-10 shadow-2xl text-white"
+                >
+                    <div class="flex items-start gap-4 mb-6">
+                        <div
+                            class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0"
+                        >
+                            <svg
+                                class="w-7 h-7 text-white"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                                ></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-3xl font-bold">
+                            Tehlikeli Hava Koşulları
+                        </h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"
+                            >
+                                <svg
+                                    class="w-5 h-5 text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg"
+                                >Gök gürültülü fırtına takibi ve
+                                uyarıları</span
+                            >
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"
+                            >
+                                <svg
+                                    class="w-5 h-5 text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg"
+                                >Buzlanma risk analizi ve tahminleri</span
+                            >
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"
+                            >
+                                <svg
+                                    class="w-5 h-5 text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg"
+                                >Şiddetli türbülans erken uyarı
+                                sistemleri</span
+                            >
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"
+                            >
+                                <svg
+                                    class="w-5 h-5 text-white"
+                                    fill="currentColor"
+                                    viewBox="0 0 20 20"
+                                >
+                                    <path
+                                        fill-rule="evenodd"
+                                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <span class="text-lg"
+                                >Volkanik kül ve kum fırtınası
+                                uyarıları</span
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative py-20 bg-gradient-to-br from-[#0f1729] via-[#141d39] to-[#1a2744]">
+            <div class="max-w-4xl mx-auto px-8 text-center">
+                <h2 class="text-4xl font-bold text-white mb-6">Havacılık Meteorolojisi Çözümlerimiz</h2>
+                <p class="text-xl text-gray-300 mb-8">Güvenli ve verimli uçuş operasyonları için özel hava tahmin sistemleri</p>
+                <a href="/index.html#contact" class="inline-block bg-gradient-to-r from-[#00a1e0] to-[#0088c7] text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-[#00a1e0]/30 transition-all duration-300 hover:scale-105">İletişime Geçin</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="relative bg-gradient-to-br from-[#0a0f1a] via-[#0f1420] to-[#141d39] border-t border-[#00a1e0]/20">
+            <div class="max-w-7xl mx-auto px-8 py-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                    <div class="lg:col-span-2">
+                        <div class="flex items-center gap-4 mb-6">
+                            <img src="/hidromod_logo.png" alt="Hidromod Logo" class="h-14 w-auto" />
+                            <div class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-3.5">
+                                <div class="text-xl font-bold leading-none tracking-tight text-white">
+                                    <span>HIDRO</span><span>MOD</span>
+                                </div>
+                                <p class="text-[11px] text-gray-400 mt-1 leading-tight max-w-[200px]">
+                                    Hidrometeorolojik Tahmin & Analiz Merkezi
+                                </p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 leading-relaxed mb-4 max-w-md text-sm">
+                            Geleceği doğru verilerle şekillendiriyoruz. Yüksek çözünürlüklü hidrometeorolojik tahmin ve analiz hizmetleri.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-4">Hızlı Erişim</h3>
+                        <ul class="space-y-3">
+                            <li><a href="/index.html#home" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"><span class="w-1 h-1 bg-[#00a1e0] rounded-full"></span>Ana Sayfa</a></li>
+                            <li><a href="/index.html#services" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"><span class="w-1 h-1 bg-[#00a1e0] rounded-full"></span>Çözümlerimiz</a></li>
+                            <li><a href="/index.html#data" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"><span class="w-1 h-1 bg-[#00a1e0] rounded-full"></span>Verilerimiz</a></li>
+                            <li><a href="/index.html#about" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"><span class="w-1 h-1 bg-[#00a1e0] rounded-full"></span>Hakkımızda</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-4">İletişim</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                    <svg class="w-5 h-5 text-[#00a1e0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                        Mustafa Kemal Mah., Dumlupınar Bulv.,<br />
+                                        280/G, No:1260, ODTÜ TEKNOKENT,<br />
+                                        Çankaya, Ankara / Türkiye
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="w-10 h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-[#00a1e0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <a href="mailto:info@hidromod.com.tr" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm">
+                                        info@hidromod.com.tr
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-6 border-t border-[#00a1e0]/20">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <div class="text-gray-400 text-sm">© 2018 HIDROMOD. Tüm hakları saklıdır.</div>
+                        <div class="flex items-center gap-6">
+                            <a href="#" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm">Gizlilik Politikası</a>
+                            <a href="#" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm">Kullanım Koşulları</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#00a1e0] to-transparent opacity-50"></div>
+        </footer>
+
+        <script type="module" src="/main.js"></script>
+        <script type="module">
+            import lottie from 'lottie-web';
+            const aviationHeroContainer = document.getElementById('aviation-icon-hero');
+            if (aviationHeroContainer) {
+                lottie.loadAnimation({
+                    container: aviationHeroContainer,
+                    renderer: 'svg',
+                    loop: true,
+                    autoplay: true,
+                    path: '/plane flying.json'
+                });
+            }
+        </script>
+    </body>
+</html>

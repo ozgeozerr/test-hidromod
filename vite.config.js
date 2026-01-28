@@ -1,0 +1,22 @@
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  root: 'public',
+  publicDir: '../assets',
+  css: {
+    postcss: './postcss.config.js',
+  },
+  resolve: {
+    alias: {
+      '@': '../src'
+    }
+  },
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true,
+  },
+  server: {
+    port: 3000,
+    open: true,
+  },
+});
