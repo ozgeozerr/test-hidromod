@@ -1,9 +1,5 @@
 export default {
-  content: [
-    "./index.html",
-    "./public/**/*.html",
-    "./src/**/*.{js,ts}", // only your source JS/TS
-  ],
+  content: ["./*.html", "./src/**/*.{js,css}"],
   theme: {
     extend: {
       colors: {

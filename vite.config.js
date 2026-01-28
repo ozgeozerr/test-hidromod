@@ -1,19 +1,16 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/test-hidromod/", // <-- GitHub Pages repo name
-  publicDir: "assets", // your videos/images folder
-  css: {
-    postcss: "./postcss.config.js",
+  root: ".", // project root
+  publicDir: "assets", // all static assets (videos, images)
+  build: {
+    outDir: "dist", // output folder for GitHub Pages
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
-      "@": "./src", // adjust if you actually have src folder
+      "@": "/src",
     },
-  },
-  build: {
-    outDir: "dist",
-    emptyOutDir: true,
   },
   server: {
     port: 3000,
