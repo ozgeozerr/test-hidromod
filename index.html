@@ -17,232 +17,232 @@
         class="bg-gray-50"
         style="
             background-color: #141d39 !important;
-            overscroll-behavior: none !important;
         "
     >
-        <!-- Navbar -->
-        <nav
-            class="fixed top-0 left-0 right-0 z-50"
-            style="
-                background: rgba(20, 29, 57, 0.85);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                border-bottom: 1px solid rgba(0, 161, 224, 0.2);
-                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-            "
-        >
-            <div
-                class="max-w-7xl mx-auto px-8 py-3.5 flex items-center justify-between"
-            >
-                <!-- Logo -->
-                <div class="flex items-center gap-4">
-                    <img
-                        src="/hidromod_logo.png"
-                        alt="Hidromod Logo"
-                        class="h-12 w-auto"
-                    />
-                    <div class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-3.5">
-                        <div
-                            class="text-lg font-bold leading-none tracking-tight text-white"
-                        >
-                            <span>HIDRO</span><span>MOD</span>
-                        </div>
-                        <p
-                            class="text-[10px] text-gray-300 mt-1 leading-tight max-w-[180px]"
-                        >
-                            Hidrometeorolojik Tahmin & Analiz Merkezi
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Navigation Items & Actions -->
-                <div class="flex items-center gap-12 ml-auto">
-                    <!-- Navigation Links -->
-                    <nav class="hidden lg:flex items-center gap-10">
-                        <!-- Home -->
-                        <a
-                            href="#home"
-                            class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
-                        >
-                            Ana Sayfa
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"></span>
-                        </a>
-
-                        <!-- Solutions Dropdown -->
-                        <div class="relative group">
-                            <button
-                                class="text-white hover:text-[#00a1e0] transition-all duration-200 flex items-center gap-1.5 font-medium text-sm relative"
-                            >
-                                <span>Çözümler</span>
-                                <svg
-                                    class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                    stroke-width="2.5"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        d="M19 9l-7 7-7-7"
-                                    ></path>
-                                </svg>
-                            </button>
-                            <!-- Dropdown Menu -->
-                            <div
-                                class="absolute top-full left-0 mt-3 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
-                            >
-                                <a
-                                    href="/hava-durumu.html"
-                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] first:rounded-t-xl font-medium"
-                                    >Hava Durumu</a
-                                >
-                                <a
-                                    href="/sivil-havacilik.html"
-                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                    >Sivil Havacılık</a
-                                >
-                                <a
-                                    href="/askeri-hava-tahmini.html"
-                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                    >Askeri Hava Tahmini
-                                </a>
-                                <a
-                                    href="/yenilenebilir-enerji.html"
-                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                    >Yenilenebilir Enerji</a
-                                >
-                                <a
-                                    href="/tarim.html"
-                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                    >Tarım</a
-                                >
-                                <a
-                                    href="/afet-tahmini.html"
-                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                    >Afet Riski ve Tahmini</a
-                                >
-                                <a
-                                    href="/iklim-degisikligi.html"
-                                    class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] last:rounded-b-xl font-medium"
-                                    >İklim Değişikliği Simülasyonları</a
-                                >
-                            </div>
-                        </div>
-
-                        <!-- Our Data -->
-                        <a
-                            href="#data"
-                            class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
-                        >
-                            Verilerimiz
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"></span>
-                        </a>
-
-                        <!-- About -->
-                        <a
-                            href="#about"
-                            class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
-                        >
-                            Hakkımızda
-                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"></span>
-                        </a>
-
-                        <!-- Contact Us Button -->
-                        <a
-                            href="#contact"
-                            class="relative bg-gradient-to-r from-[#00a1e0] to-[#0088c7] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-[#00a1e0]/30 transition-all duration-300 hover:scale-105"
-                        >
-                            İletişim
-                        </a>
-                    </nav>
-
-                    <!-- Language Switcher -->
-                    <div
-                        class="flex items-center gap-1 bg-white/5 backdrop-blur-sm border border-[#00a1e0]/30 rounded-lg p-1"
-                    >
-                        <button
-                            class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-3 py-1.5 rounded-md transition-all duration-200 active-lang"
-                            data-lang="en"
-                        >
-                            EN
-                        </button>
-                        <button
-                            class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-3 py-1.5 rounded-md transition-all duration-200"
-                            data-lang="tr"
-                        >
-                            TR
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button class="md:hidden text-white" id="mobile-menu-btn">
-                    <svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                    >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"
-                        ></path>
-                    </svg>
-                </button>
-            </div>
-        </nav>
-
-        <!-- Mobile Menu -->
+    <!-- Navbar -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50"
+        style="
+            background: rgba(20, 29, 57, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 161, 224, 0.2);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+        "
+    >
         <div
-            id="mobile-menu"
-            class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden"
+            class="max-w-7xl mx-auto px-8 py-3.5 flex items-center justify-between"
         >
-            <div
-                class="bg-white w-full max-w-sm ml-auto h-full p-8 rounded-l-3xl"
-            >
-                <button id="close-mobile-menu" class="text-gray-700 mb-8">
-                    <svg
-                        class="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
+            <!-- Logo -->
+            <div class="flex items-center gap-4">
+                <img
+                    src="/hidromod_logo.png"
+                    alt="Hidromod Logo"
+                    class="h-12 w-auto"
+                />
+                <div
+                    class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-3.5"
+                >
+                    <div
+                        class="text-lg font-bold leading-none tracking-tight text-white"
                     >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M6 18L18 6M6 6l12 12"
-                        ></path>
-                    </svg>
-                </button>
-                <nav class="space-y-6">
+                        <span>HIDRO</span><span>MOD</span>
+                    </div>
+                    <p
+                        class="text-[10px] text-gray-300 mt-1 leading-tight max-w-[180px]"
+                    >
+                        Hidrometeorolojik Tahmin & Analiz Merkezi
+                    </p>
+                </div>
+            </div>
+
+            <!-- Navigation Items & Actions -->
+            <div class="flex items-center gap-12 ml-auto">
+                <!-- Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-10">
+                    <!-- Home -->
                     <a
                         href="#home"
-                        class="block text-gray-700 hover:text-blue-600 text-lg"
-                        >Home</a
+                        class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
                     >
-                    <a
-                        href="#solutions"
-                        class="block text-gray-700 hover:text-blue-600 text-lg"
-                        >Solutions</a
-                    >
-                    <a
-                        href="#data"
-                        class="block text-gray-700 hover:text-blue-600 text-lg"
-                        >Our Data</a
-                    >
+                        Ana Sayfa
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"
+                        ></span>
+                    </a>
+
+                    <!-- Solutions Dropdown -->
+                    <div class="relative group">
+                        <button
+                            class="text-white hover:text-[#00a1e0] transition-all duration-200 flex items-center gap-1.5 font-medium text-sm relative"
+                        >
+                            <span>Çözümler</span>
+                            <svg
+                                class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                stroke-width="2.5"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M19 9l-7 7-7-7"
+                                ></path>
+                            </svg>
+                        </button>
+                        <!-- Dropdown Menu -->
+                        <div
+                            class="absolute top-full left-0 mt-3 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
+                        >
+                            <a
+                                href="/askeri-hava-tahmini.html"
+                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                >Askeri Hava Tahmini
+                            </a>
+
+                            <a
+                                href="/sivil-havacilik.html"
+                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                >Sivil Havacılık</a
+                            >
+
+                            <a
+                                href="/uzay-meteorolojisi.html"
+                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                >Uzay Meteorolojisi</a
+                            >
+                            <a
+                                href="/hava-durumu.html"
+                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] first:rounded-t-xl font-medium"
+                                >Hava Durumu</a
+                            >
+
+                            <a
+                                href="/yenilenebilir-enerji.html"
+                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                >Yenilenebilir Enerji</a
+                            >
+                            <a
+                                href="/tarim.html"
+                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                >Tarım</a
+                            >
+                            <a
+                                href="/afet-tahmini.html"
+                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
+                                >Afet Riski ve Tahmini</a
+                            >
+                            <a
+                                href="/iklim-degisikligi.html"
+                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] last:rounded-b-xl font-medium"
+                                >İklim Değişikliği Simülasyonları</a
+                            >
+                        </div>
+                    </div>
+
+
+                        <span
+                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"
+                        ></span>
+                    </a>
+
+
+                    <!-- Contact Us Button -->
                     <a
                         href="#contact"
-                        class="block text-gray-700 hover:text-blue-600 text-lg"
-                        >Contact Us</a
+                        class="relative bg-gradient-to-r from-[#00a1e0] to-[#0088c7] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-[#00a1e0]/30 transition-all duration-300 hover:scale-105"
                     >
+                        İletişim
+                    </a>
                 </nav>
-            </div>
-        </div>
 
+                <!-- Language Switcher -->
+                <div
+                    class="flex items-center gap-1 bg-white/5 backdrop-blur-sm border border-[#00a1e0]/30 rounded-lg p-1"
+                >
+                    <button
+                        class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-3 py-1.5 rounded-md transition-all duration-200 active-lang"
+                        data-lang="en"
+                    >
+                        EN
+                    </button>
+                    <button
+                        class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-3 py-1.5 rounded-md transition-all duration-200"
+                        data-lang="tr"
+                    >
+                        TR
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white" id="mobile-menu-btn">
+                <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"
+                    ></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+        id="mobile-menu"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 hidden"
+    >
+        <div
+            class="bg-white w-full max-w-sm ml-auto h-full p-8 rounded-l-3xl"
+        >
+            <button id="close-mobile-menu" class="text-gray-700 mb-8">
+                <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"
+                    ></path>
+                </svg>
+            </button>
+            <nav class="space-y-6">
+                <a
+                    href="#home"
+                    class="block text-gray-700 hover:text-blue-600 text-lg"
+                    >Home</a
+                >
+                <a
+                    href="#solutions"
+                    class="block text-gray-700 hover:text-blue-600 text-lg"
+                    >Solutions</a
+                >
+                <a
+                    href="#data"
+                    class="block text-gray-700 hover:text-blue-600 text-lg"
+                    >Our Data</a
+                >
+                <a
+                    href="#contact"
+                    class="block text-gray-700 hover:text-blue-600 text-lg"
+                    >Contact Us</a
+                >
+            </nav>
+        </div>
+    </div>
         <!-- Main Content -->
         <main class="pt-16">
             <!-- Hero Section -->
@@ -274,7 +274,9 @@
                 <!-- Dark overlay for better text readability -->
                 <div class="absolute inset-0 bg-black/15 z-0"></div>
 
-                <div class="w-full px-12 relative z-10 h-full flex items-center justify-center">
+                <div
+                    class="w-full px-12 relative z-10 h-full flex items-center justify-center"
+                >
                     <div class="w-full pt-16">
                         <!-- Centered Content -->
                         <div class="space-y-8 max-w-3xl text-center mx-auto">
@@ -289,27 +291,66 @@
                                 şekillendiriyoruz
                             </h1>
                             <div class="space-y-4 animate-fade-in-up-delay">
-                                <p class="text-lg lg:text-xl text-gray-200 leading-relaxed" style="text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.5);">
-                                    Yüksek çözünürlüklü hidrometeorolojik tahmin ve analiz merkezi
+                                <p
+                                    class="text-lg lg:text-xl text-gray-200 leading-relaxed"
+                                    style="
+                                        text-shadow: 1px 2px 8px
+                                            rgba(0, 0, 0, 0.5);
+                                    "
+                                >
+                                    Yüksek çözünürlüklü hidrometeorolojik tahmin
+                                    ve analiz merkezi
                                 </p>
 
                                 <!-- Key Features -->
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2">
-                                    <div class="flex items-center gap-3 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10">
-                                        <div class="w-2 h-2 bg-[#00a1e0] rounded-full"></div>
-                                        <span class="text-sm lg:text-base text-white font-medium">7 güne varan hassas tahminler</span>
+                                <div
+                                    class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2"
+                                >
+                                    <div
+                                        class="flex items-center gap-3 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10"
+                                    >
+                                        <div
+                                            class="w-2 h-2 bg-[#00a1e0] rounded-full"
+                                        ></div>
+                                        <span
+                                            class="text-sm lg:text-base text-white font-medium"
+                                            >7 güne varan hassas tahminler</span
+                                        >
                                     </div>
-                                    <div class="flex items-center gap-3 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10">
-                                        <div class="w-2 h-2 bg-[#4fd1c5] rounded-full"></div>
-                                        <span class="text-sm lg:text-base text-white font-medium">Gerçek zamanlı veri akışı</span>
+                                    <div
+                                        class="flex items-center gap-3 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10"
+                                    >
+                                        <div
+                                            class="w-2 h-2 bg-[#4fd1c5] rounded-full"
+                                        ></div>
+                                        <span
+                                            class="text-sm lg:text-base text-white font-medium"
+                                            >Gerçek zamanlı veri akışı</span
+                                        >
                                     </div>
-                                    <div class="flex items-center gap-3 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10">
-                                        <div class="w-2 h-2 bg-[#00a1e0] rounded-full"></div>
-                                        <span class="text-sm lg:text-base text-white font-medium">100 yıllık iklim projeksiyonları</span>
+                                    <div
+                                        class="flex items-center gap-3 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10"
+                                    >
+                                        <div
+                                            class="w-2 h-2 bg-[#00a1e0] rounded-full"
+                                        ></div>
+                                        <span
+                                            class="text-sm lg:text-base text-white font-medium"
+                                            >100 yıllık iklim
+                                            projeksiyonları</span
+                                        >
                                     </div>
-                                    <div class="flex items-center gap-3 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10">
-                                        <div class="w-2 h-2 bg-[#4fd1c5] rounded-full"></div>
-                                        <span class="text-sm lg:text-base text-white font-medium">Operasyonel meteorolojik destek</span>
+                                    <div
+                                        class="flex items-center gap-3 bg-black/20 backdrop-blur-sm rounded-lg px-4 py-3 border border-white/10"
+                                    >
+                                        <div
+                                            class="w-2 h-2 bg-[#4fd1c5] rounded-full"
+                                        ></div>
+                                        <span
+                                            class="text-sm lg:text-base text-white font-medium"
+                                            >Operasyonel meteorolojik
+                                            destek</span
+                                        >
                                     </div>
                                 </div>
                             </div>
@@ -320,8 +361,13 @@
 
             <!-- Divider -->
             <div class="relative w-full h-1">
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent opacity-30"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent" style="width: 60%; left: 20%;"></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent opacity-30"
+                ></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent"
+                    style="width: 60%; left: 20%"
+                ></div>
             </div>
 
             <!-- What We Offer Section -->
@@ -370,11 +416,13 @@
                     </div>
 
                     <!-- Services Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6"
+                    >
                         <!-- Climate -->
                         <div
                             class="group relative bg-white/95 rounded-2xl p-6 hover:shadow-2xl hover:shadow-[#00a1e0]/20 transition-all duration-300 border border-gray-200/50 overflow-hidden backdrop-blur-sm hover:-translate-y-1 cursor-pointer"
-                            onclick="window.location.href='/hava-durumu.html'"
+                            onclick="window.location.href = '/hava-durumu.html'"
                         >
                             <!-- Icon with gradient background -->
                             <div class="flex items-center gap-4 mb-5">
@@ -421,7 +469,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Kısa vadeli (7 güne varan) hava tahminleri
+                                        Kısa vadeli (7 güne varan) hava
+                                        tahminleri
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -437,7 +486,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Yüksek çözünürlüklü detaylı atmosferik modelleme
+                                        Yüksek çözünürlüklü detaylı atmosferik
+                                        modelleme
                                     </p>
                                 </div>
                             </div>
@@ -446,7 +496,9 @@
                         <!-- Aviation -->
                         <div
                             class="group relative bg-white/95 rounded-2xl p-6 hover:shadow-2xl hover:shadow-[#00a1e0]/20 transition-all duration-300 border border-gray-200/50 overflow-hidden backdrop-blur-sm hover:-translate-y-1 cursor-pointer"
-                            onclick="window.location.href='/sivil-havacilik.html'"
+                            onclick="
+                                window.location.href = '/sivil-havacilik.html'
+                            "
                         >
                             <div class="flex items-center gap-4 mb-5">
                                 <div
@@ -476,7 +528,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Yüksek çözünürlüklü rüzgar ve atmosfer değişken tahminleri
+                                        Yüksek çözünürlüklü rüzgar ve atmosfer
+                                        değişken tahminleri
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -492,7 +545,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Hava güvenliği için operasyonel meteorolojik bilgiler
+                                        Hava güvenliği için operasyonel
+                                        meteorolojik bilgiler
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -508,7 +562,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Model destekli trend ve kümülatif risk verileri
+                                        Model destekli trend ve kümülatif risk
+                                        verileri
                                     </p>
                                 </div>
                             </div>
@@ -517,7 +572,10 @@
                         <!-- Defense Industry -->
                         <div
                             class="group relative bg-white/95 rounded-2xl p-6 hover:shadow-2xl hover:shadow-[#00a1e0]/20 transition-all duration-300 border border-gray-200/50 overflow-hidden backdrop-blur-sm hover:-translate-y-1 cursor-pointer"
-                            onclick="window.location.href='/askeri-hava-tahmini.html'"
+                            onclick="
+                                window.location.href =
+                                    '/askeri-hava-tahmini.html'
+                            "
                         >
                             <div class="flex items-center gap-4 mb-5">
                                 <div
@@ -547,7 +605,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Yüksek çözünürlüklü operasyonel meteorolojik destek
+                                        Yüksek çözünürlüklü operasyonel
+                                        meteorolojik destek
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -563,7 +622,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Stratejik planlamalar için özel atmosferik analizler
+                                        Stratejik planlamalar için özel
+                                        atmosferik analizler
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -579,7 +639,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Kritik görevler için hassas hava durumu tahminleri
+                                        Kritik görevler için hassas hava durumu
+                                        tahminleri
                                     </p>
                                 </div>
                             </div>
@@ -588,7 +649,10 @@
                         <!-- Energy -->
                         <div
                             class="group relative bg-white/95 rounded-2xl p-6 hover:shadow-2xl hover:shadow-[#00a1e0]/20 transition-all duration-300 border border-gray-200/50 overflow-hidden backdrop-blur-sm hover:-translate-y-1 cursor-pointer"
-                            onclick="window.location.href='/yenilenebilir-enerji.html'"
+                            onclick="
+                                window.location.href =
+                                    '/yenilenebilir-enerji.html'
+                            "
                         >
                             <div class="flex items-center gap-4 mb-5">
                                 <div
@@ -618,7 +682,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Rüzgar ve güneş enerjisi potansiyeli tahmini
+                                        Rüzgar ve güneş enerjisi potansiyeli
+                                        tahmini
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -634,7 +699,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Hidroelektrik akış ve potansiyel tahminleri
+                                        Hidroelektrik akış ve potansiyel
+                                        tahminleri
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -650,20 +716,22 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Enerji üretim verimliliği için lokasyon analizi
+                                        Enerji üretim verimliliği için lokasyon
+                                        analizi
                                     </p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                     <!-- Second Row - 3 Cards Centered -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+                    >
                         <!-- Agriculture -->
                         <div
                             class="group relative bg-white/95 rounded-2xl p-6 hover:shadow-2xl hover:shadow-[#00a1e0]/20 transition-all duration-300 border border-gray-200/50 overflow-hidden backdrop-blur-sm hover:-translate-y-1 cursor-pointer"
-                            onclick="window.location.href='/tarim.html'"
+                            onclick="window.location.href = '/tarim.html'"
                         >
                             <div class="flex items-center gap-4 mb-5">
                                 <div
@@ -693,7 +761,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Uydu analizleri ile ürün sınıflandırması ve haritalama
+                                        Uydu analizleri ile ürün sınıflandırması
+                                        ve haritalama
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -709,7 +778,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Ürün rekolte tahmini (buğday, mısır, domates vb.)
+                                        Ürün rekolte tahmini (buğday, mısır,
+                                        domates vb.)
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -734,7 +804,9 @@
                         <!-- Disaster -->
                         <div
                             class="group relative bg-white/95 rounded-2xl p-6 hover:shadow-2xl hover:shadow-[#00a1e0]/20 transition-all duration-300 border border-gray-200/50 overflow-hidden backdrop-blur-sm hover:-translate-y-1 cursor-pointer"
-                            onclick="window.location.href='/afet-tahmini.html'"
+                            onclick="
+                                window.location.href = '/afet-tahmini.html'
+                            "
                         >
                             <div class="flex items-center gap-4 mb-5">
                                 <div
@@ -764,7 +836,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Çığ, kuraklık ve orman yangını risk analizi
+                                        Çığ, kuraklık ve orman yangını risk
+                                        analizi
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -796,7 +869,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        Ekstrem hava olayları erken uyarı sistemleri
+                                        Ekstrem hava olayları erken uyarı
+                                        sistemleri
                                     </p>
                                 </div>
                             </div>
@@ -805,7 +879,9 @@
                         <!-- Climate Change Simulations -->
                         <div
                             class="group relative bg-white/95 rounded-2xl p-6 hover:shadow-2xl hover:shadow-[#00a1e0]/20 transition-all duration-300 border border-gray-200/50 overflow-hidden backdrop-blur-sm hover:-translate-y-1 cursor-pointer"
-                            onclick="window.location.href='/iklim-degisikligi.html'"
+                            onclick="
+                                window.location.href = '/iklim-degisikligi.html'
+                            "
                         >
                             <div class="flex items-center gap-4 mb-5">
                                 <div
@@ -835,7 +911,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        100 yıllık yüksek çözünürlüklü iklim projeksiyonları
+                                        100 yıllık yüksek çözünürlüklü iklim
+                                        projeksiyonları
                                     </p>
                                 </div>
                                 <div class="flex items-start gap-2.5">
@@ -867,7 +944,8 @@
                                         />
                                     </svg>
                                     <p class="text-sm text-gray-600">
-                                        İklim değişikliğinin yerel etki değerlendirmeleri
+                                        İklim değişikliğinin yerel etki
+                                        değerlendirmeleri
                                     </p>
                                 </div>
                             </div>
@@ -878,24 +956,97 @@
 
             <!-- Divider -->
             <div class="relative w-full h-1">
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent opacity-30"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent" style="width: 60%; left: 20%;"></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent opacity-30"
+                ></div>
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent"
+                    style="width: 60%; left: 20%"
+                ></div>
             </div>
 
             <!-- Our Interests Section -->
             <section
                 class="relative py-20 overflow-hidden"
-                style="background-color: #f0f7fa;"
+                style="background-color: #f0f7fa"
             >
                 <!-- Soft Background Effects -->
-                <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div class="absolute top-10 right-10 w-[500px] h-[500px] bg-[#00a1e0]/40 rounded-full blur-3xl"></div>
-                    <div class="absolute bottom-10 left-10 w-[600px] h-[600px] bg-[#4fd1c5]/40 rounded-full blur-3xl"></div>
-                    <div class="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-[#6ea636]/40 rounded-full blur-3xl"></div>
+                <div
+                    class="absolute inset-0 overflow-hidden pointer-events-none"
+                >
+                    <div
+                        class="absolute top-10 right-10 w-[500px] h-[500px] bg-[#00a1e0]/40 rounded-full blur-3xl"
+                    ></div>
+                    <div
+                        class="absolute bottom-10 left-10 w-[600px] h-[600px] bg-[#4fd1c5]/40 rounded-full blur-3xl"
+                    ></div>
+                    <div
+                        class="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-[#6ea636]/40 rounded-full blur-3xl"
+                    ></div>
                 </div>
 
                 <!-- Content -->
                 <div class="relative z-10 max-w-7xl mx-auto px-6">
+                    <!-- Sliding References Section -->
+                    <div class="mb-32 overflow-hidden" style="background: linear-gradient(135deg, #1a2744 0%, #1e3a5f 50%, #1a2744 100%);">
+                        <div class="py-10 flex animate-slide-infinite whitespace-nowrap">
+                            <!-- First set -->
+                            <div class="flex items-center gap-12 px-10 flex-shrink-0">
+                                <div class="flex-shrink-0 flex items-center justify-center" style="width:200px;">
+                                    <img src="/referanslar/cevre-sehircilik.svg" alt="Çevre ve Şehircilik" class="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <!-- multicolor logo → white bg container, no filter -->
+                                <div class="flex-shrink-0 bg-white rounded-lg px-4 py-2 flex items-center justify-center" style="width:220px;">
+                                    <img src="/referanslar/jandarma_genel_komutanligi_logo.png" alt="Jandarma Genel Komutanlığı" class="h-12 w-auto object-contain" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <div class="flex-shrink-0 flex items-center justify-center" style="width:200px;">
+                                    <img src="/referanslar/kkk-banner-beyaz.png" alt="KKK" class="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <div class="flex-shrink-0 flex items-center justify-center" style="width:200px;">
+                                    <img src="/referanslar/logo_baslik.png" alt="Logo" class="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <!-- multicolor logo → white bg container, no filter -->
+                                <div class="flex-shrink-0 bg-white rounded-lg px-4 py-2 flex items-center justify-center" style="width:120px;">
+                                    <img src="/referanslar/milsoft.png" alt="Milsoft" class="h-12 w-auto object-contain" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <div class="flex-shrink-0 flex items-center justify-center" style="width:180px;">
+                                    <img src="/referanslar/promec.webp" alt="Promec" class="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                </div>
+                            </div>
+                            <!-- Duplicate set for seamless loop -->
+                            <div class="flex items-center gap-12 px-10 flex-shrink-0">
+                                <div class="flex-shrink-0 flex items-center justify-center" style="width:200px;">
+                                    <img src="/referanslar/cevre-sehircilik.svg" alt="Çevre ve Şehircilik" class="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <div class="flex-shrink-0 bg-white rounded-lg px-4 py-2 flex items-center justify-center" style="width:220px;">
+                                    <img src="/referanslar/jandarma_genel_komutanligi_logo.png" alt="Jandarma Genel Komutanlığı" class="h-12 w-auto object-contain" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <div class="flex-shrink-0 flex items-center justify-center" style="width:200px;">
+                                    <img src="/referanslar/kkk-banner-beyaz.png" alt="KKK" class="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <div class="flex-shrink-0 flex items-center justify-center" style="width:200px;">
+                                    <img src="/referanslar/logo_baslik.png" alt="Logo" class="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <div class="flex-shrink-0 bg-white rounded-lg px-4 py-2 flex items-center justify-center" style="width:120px;">
+                                    <img src="/referanslar/milsoft.png" alt="Milsoft" class="h-12 w-auto object-contain" />
+                                </div>
+                                <div class="flex-shrink-0 w-px h-10 bg-white/15"></div>
+                                <div class="flex-shrink-0 flex items-center justify-center" style="width:180px;">
+                                    <img src="/referanslar/promec.webp" alt="Promec" class="h-14 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Section Header -->
                     <div class="text-center mb-16">
                         <div class="inline-block mb-4">
@@ -1460,52 +1611,92 @@
         </main>
 
         <!-- Footer -->
-        <footer class="relative bg-gradient-to-br from-[#0a0f1a] via-[#0f1420] to-[#141d39] border-t border-[#00a1e0]/20">
+        <footer
+            class="relative bg-gradient-to-br from-[#0a0f1a] via-[#0f1420] to-[#141d39] border-t border-[#00a1e0]/20"
+        >
             <div class="max-w-7xl mx-auto px-8 py-10">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"
+                >
                     <!-- Company Info -->
                     <div class="lg:col-span-2">
                         <div class="flex items-center gap-4 mb-6">
-                            <img src="/hidromod_logo.png" alt="Hidromod Logo" class="h-14 w-auto" />
-                            <div class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-3.5">
-                                <div class="text-xl font-bold leading-none tracking-tight text-white">
+                            <img
+                                src="/hidromod_logo.png"
+                                alt="Hidromod Logo"
+                                class="h-14 w-auto"
+                            />
+                            <div
+                                class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-3.5"
+                            >
+                                <div
+                                    class="text-xl font-bold leading-none tracking-tight text-white"
+                                >
                                     <span>HIDRO</span><span>MOD</span>
                                 </div>
-                                <p class="text-[11px] text-gray-400 mt-1 leading-tight max-w-[200px]">
+                                <p
+                                    class="text-[11px] text-gray-400 mt-1 leading-tight max-w-[200px]"
+                                >
                                     Hidrometeorolojik Tahmin & Analiz Merkezi
                                 </p>
                             </div>
                         </div>
-                        <p class="text-gray-400 leading-relaxed mb-4 max-w-md text-sm">
-                            Geleceği doğru verilerle şekillendiriyoruz. Yüksek çözünürlüklü hidrometeorolojik tahmin ve analiz hizmetleri.
+                        <p
+                            class="text-gray-400 leading-relaxed mb-4 max-w-md text-sm"
+                        >
+                            Geleceği doğru verilerle şekillendiriyoruz. Yüksek
+                            çözünürlüklü hidrometeorolojik tahmin ve analiz
+                            hizmetleri.
                         </p>
                     </div>
 
                     <!-- Quick Links -->
                     <div>
-                        <h3 class="text-white font-bold text-lg mb-4">Hızlı Erişim</h3>
+                        <h3 class="text-white font-bold text-lg mb-4">
+                            Hızlı Erişim
+                        </h3>
                         <ul class="space-y-3">
                             <li>
-                                <a href="#home" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2">
-                                    <span class="w-1 h-1 bg-[#00a1e0] rounded-full"></span>
+                                <a
+                                    href="#home"
+                                    class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"
+                                >
+                                    <span
+                                        class="w-1 h-1 bg-[#00a1e0] rounded-full"
+                                    ></span>
                                     Ana Sayfa
                                 </a>
                             </li>
                             <li>
-                                <a href="#services" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2">
-                                    <span class="w-1 h-1 bg-[#00a1e0] rounded-full"></span>
+                                <a
+                                    href="#services"
+                                    class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"
+                                >
+                                    <span
+                                        class="w-1 h-1 bg-[#00a1e0] rounded-full"
+                                    ></span>
                                     Çözümlerimiz
                                 </a>
                             </li>
                             <li>
-                                <a href="#data" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2">
-                                    <span class="w-1 h-1 bg-[#00a1e0] rounded-full"></span>
+                                <a
+                                    href="#data"
+                                    class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"
+                                >
+                                    <span
+                                        class="w-1 h-1 bg-[#00a1e0] rounded-full"
+                                    ></span>
                                     Verilerimiz
                                 </a>
                             </li>
                             <li>
-                                <a href="#about" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2">
-                                    <span class="w-1 h-1 bg-[#00a1e0] rounded-full"></span>
+                                <a
+                                    href="#about"
+                                    class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"
+                                >
+                                    <span
+                                        class="w-1 h-1 bg-[#00a1e0] rounded-full"
+                                    ></span>
                                     Hakkımızda
                                 </a>
                             </li>
@@ -1514,18 +1705,39 @@
 
                     <!-- Contact Info -->
                     <div>
-                        <h3 class="text-white font-bold text-lg mb-4">İletişim</h3>
+                        <h3 class="text-white font-bold text-lg mb-4">
+                            İletişim
+                        </h3>
                         <div class="space-y-4">
                             <!-- Address -->
                             <div class="flex items-start gap-3">
-                                <div class="w-10 h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                    <svg class="w-5 h-5 text-[#00a1e0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <div
+                                    class="w-10 h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"
+                                >
+                                    <svg
+                                        class="w-5 h-5 text-[#00a1e0]"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                        ></path>
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                        ></path>
                                     </svg>
                                 </div>
                                 <div>
-                                    <p class="text-gray-400 text-sm leading-relaxed">
+                                    <p
+                                        class="text-gray-400 text-sm leading-relaxed"
+                                    >
                                         Mustafa Kemal Mah., Dumlupınar Bulv.,<br />
                                         280/G, No:1260, ODTÜ TEKNOKENT,<br />
                                         Çankaya, Ankara / Türkiye
@@ -1535,13 +1747,28 @@
 
                             <!-- Email -->
                             <div class="flex items-start gap-3">
-                                <div class="w-10 h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                    <svg class="w-5 h-5 text-[#00a1e0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                <div
+                                    class="w-10 h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                                >
+                                    <svg
+                                        class="w-5 h-5 text-[#00a1e0]"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        ></path>
                                     </svg>
                                 </div>
                                 <div>
-                                    <a href="mailto:info@hidromod.com.tr" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm">
+                                    <a
+                                        href="mailto:info@hidromod.com.tr"
+                                        class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm"
+                                    >
                                         info@hidromod.com.tr
                                     </a>
                                 </div>
@@ -1552,15 +1779,23 @@
 
                 <!-- Bottom Bar -->
                 <div class="pt-6 border-t border-[#00a1e0]/20">
-                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center gap-4"
+                    >
                         <div class="text-gray-400 text-sm">
                             © 2018 HIDROMOD. Tüm hakları saklıdır.
                         </div>
                         <div class="flex items-center gap-6">
-                            <a href="#" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm">
+                            <a
+                                href="#"
+                                class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm"
+                            >
                                 Gizlilik Politikası
                             </a>
-                            <a href="#" class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm">
+                            <a
+                                href="#"
+                                class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm"
+                            >
                                 Kullanım Koşulları
                             </a>
                         </div>
@@ -1569,7 +1804,9 @@
             </div>
 
             <!-- Decorative Elements -->
-            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#00a1e0] to-transparent opacity-50"></div>
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#00a1e0] to-transparent opacity-50"
+            ></div>
         </footer>
 
         <script type="module" src="/main.js"></script>

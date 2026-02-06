@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Tarım - Hidromod</title>
+        <title>Yenilenebilir Enerji- Hidromod</title>
         <link rel="icon" type="image/png" href="/hidromod_logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -262,7 +262,7 @@
                 playsinline
                 class="absolute top-0 left-0 w-full h-full object-cover"
             >
-                <source src="/tarim.mp4" type="video/mp4" />
+                <source src="/yenilenebilir.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
@@ -273,10 +273,10 @@
             <div class="relative h-full flex items-center justify-center">
                 <div class="max-w-4xl mx-auto px-8 text-center">
                     <h1 class="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
-                        Tarım
+                        Yenilenebilir Enerji
                     </h1>
                     <p class="text-xl lg:text-2xl text-white leading-relaxed drop-shadow-lg">
-                        Hassas tarım için meteorolojik veri ile mahsül verimini ve sulama planlamasını optimize edelim
+                        Rüzgar, güneş ve hidroelektrik potansiyelin meteorolojik verilerle hassas tahmin ve optimizasyonu
                     </p>
                 </div>
             </div>
@@ -289,93 +289,121 @@
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent" style="width: 60%; left: 20%;"></div>
         </div>
 
+
+        <!-- Stats Section -->
+        <section class="py-4" style="background: linear-gradient(135deg, #0f1628 0%, #141d39 50%, #0f1628 100%);">
+            <div class="max-w-7xl mx-auto px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="text-center">
+                        <div class="text-3xl lg:text-4xl font-bold text-[#00a1e0] mb-1">10m</div>
+                        <div class="text-sm text-gray-400 font-medium">Rüzgar Tahmin Çözünürlüğü</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl lg:text-4xl font-bold text-[#4fd1c5] mb-1">%95+</div>
+                        <div class="text-sm text-gray-400 font-medium">Güneş Radyasyon Doğruluğu</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl lg:text-4xl font-bold text-[#00a1e0] mb-1">72 Saat</div>
+                        <div class="text-sm text-gray-400 font-medium">Hidroelektrik Akış Tahmini</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl lg:text-4xl font-bold text-[#4fd1c5] mb-1">1km²</div>
+                        <div class="text-sm text-gray-400 font-medium">Lokasyon Analiz Hassasiyeti</div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Key Features Section -->
-        <section class="relative py-20 overflow-hidden" style="background: #ffffff;">
-            <!-- Sun glow top-left -->
-            <div class="absolute pointer-events-none" style="top: -200px; left: -200px; width: 800px; height: 800px; background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 250, 200, 0.95) 12%, rgba(255, 235, 150, 0.7) 25%, rgba(255, 220, 120, 0.4) 40%, rgba(255, 210, 100, 0.15) 58%, transparent 75%); border-radius: 50%;"></div>
-            <!-- Sun soft outer wash -->
-            <div class="absolute pointer-events-none" style="top: -250px; left: -250px; width: 900px; height: 900px; background: radial-gradient(circle, transparent 30%, rgba(255, 230, 160, 0.12) 50%, rgba(255, 220, 140, 0.06) 65%, transparent 80%); border-radius: 50%; filter: blur(20px);"></div>
+        <section class="relative py-20 overflow-hidden">
+            <!-- Background Video -->
+            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+                <source src="assets/solar.mp4" type="video/mp4" />
+            </video>
+            <!-- Overlay -->
+            <div class="absolute inset-0" style="background: rgba(232, 244, 248, 0.55);"></div>
+            <!-- Rain Animation Canvas -->
+            <canvas id="rainCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-40"></canvas>
 
             <div class="max-w-7xl mx-auto px-8 relative z-10">
                 <div class="text-center mb-16">
-                    <span class="text-[#2e7d32] font-semibold text-xs uppercase tracking-wider">Hassas Tarım Çözümları</span>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-[#1b5e20] mt-2 mb-3">
-                        Tarım Odaklı Meteoroloji
+
+                    <h2 class="text-3xl lg:text-4xl font-bold text-[#0f1628] mt-2 mb-3" style="text-shadow: 0 1px 2px rgba(255,255,255,0.6);">
+                        Yenilenebilir Enerji Çözümleri
                     </h2>
-                    <p class="text-base text-[#4a6580] max-w-2xl mx-auto">
-                        Toprak, iklim ve mahsül verilerinin entegrasyonuyla tarım üretimini maksimize eden yapay zeka destekli tahmin sistemi
+                    <p class="text-base font-semibold text-white max-w-2xl mx-auto" style="text-shadow: 0 2px 8px rgba(0,0,0,0.5);">
+                        Rüzgar, güneş ve hidroelektrik kaynaklar için meteorolojik veri temelli enerji potansiyeli analizi ve optimizasyon
                     </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-6">
                     <!-- Feature 1 -->
                     <div class="group relative opacity-0 animate-fade-in-up" style="animation-delay: 0.1s;">
-                        <div class="relative p-6 bg-white rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-[#2e7d32] h-full overflow-hidden">
+                        <div class="relative p-6 bg-white rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-[#4fd1c5] h-full overflow-hidden">
                             <!-- Accent line -->
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-[#2e7d32]"></div>
+                            <div class="absolute top-0 left-0 right-0 h-1 bg-[#4fd1c5]"></div>
 
                             <div class="flex items-center gap-4 mb-5">
-                                <div class="w-14 h-14 bg-[#2e7d32] rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+                                <div class="w-14 h-14 bg-[#00a1e0] rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
                                     <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
                                     </svg>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-[#1b5e20]">
-                                    Yağış & Don Tahmini
+                                <h3 class="text-xl font-bold text-[#1e3a5f]">
+                                    Rüzgar Enerjisi Potansiyel Tahmini
                                 </h3>
                             </div>
 
                             <p class="text-base text-[#4a6580] leading-relaxed">
-                                Sahada kurulan sensörler ve uydu verilerinden yağış miktarı, yağış türü ve don olaylarının 7 günlük öngörüsü. Kritik büyüme dönemlerinde mahsül koruma uyarı sistemi ile erken uyarı ve hasar minimizasyonu.
+                                Yüksek çözünürlüklü mesoscale rüzgar modelleri ve LiDAR veri ile bölgesel rüzgar hızı, yönü ve türbülanssız profillerin detaylı tahminleri. Rüzgar turbinleri için optimal lokasyon seçimi ve yıllık enerji üretim potansiyeli analizi ile yatırım kararlarının desteklenmesi.
                             </p>
                         </div>
                     </div>
 
                     <!-- Feature 2 -->
                     <div class="group relative opacity-0 animate-fade-in-up" style="animation-delay: 0.2s;">
-                        <div class="relative p-6 bg-white rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-[#388e3c] h-full overflow-hidden">
+                        <div class="relative p-6 bg-white rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-[#00a1e0] h-full overflow-hidden">
                             <!-- Accent line -->
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-[#388e3c]"></div>
+                            <div class="absolute top-0 left-0 right-0 h-1 bg-[#00a1e0]"></div>
 
                             <div class="flex items-center gap-4 mb-5">
-                                <div class="w-14 h-14 bg-[#388e3c] rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+                                <div class="w-14 h-14 bg-[#4fd1c5] rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
                                     <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                                     </svg>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-[#1b5e20]">
-                                    Sulama Optimizasyonu
+                                <h3 class="text-xl font-bold text-[#1e3a5f]">
+                                    Güneş Radyasyon & Performans Analizi
                                 </h3>
                             </div>
 
                             <p class="text-base text-[#4a6580] leading-relaxed">
-                                Toprak nemi, evapotranspirasyonu ve gelecek yağış tahminlerinin birleştirilmesiyle tarla bazında sulama programı oluşturma. Su tasarrufu yönlendirme ile hem kaynak israfı hem de mahsül stresinin önlenmesi.
+                                Satellite ve yerde kurulan sensörlerden alınan GHI, DNI ve DHI radyasyon verilerinin AI destekli tahminleri. Bulut örtüsü ve atmosferik süzme faktörlerinin modellenmesi ile fotovoltaik panel performansının saatlik ve günlük öngörüsünün yapılması.
                             </p>
                         </div>
                     </div>
 
                     <!-- Feature 3 -->
                     <div class="group relative opacity-0 animate-fade-in-up" style="animation-delay: 0.3s;">
-                        <div class="relative p-6 bg-white rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-[#2e7d32] h-full overflow-hidden">
+                        <div class="relative p-6 bg-white rounded-xl hover:shadow-xl transition-all duration-300 border-2 border-gray-200 hover:border-[#4fd1c5] h-full overflow-hidden">
                             <!-- Accent line -->
-                            <div class="absolute top-0 left-0 right-0 h-1 bg-[#2e7d32]"></div>
+                            <div class="absolute top-0 left-0 right-0 h-1 bg-[#4fd1c5]"></div>
 
                             <div class="flex items-center gap-4 mb-5">
-                                <div class="w-14 h-14 bg-[#2e7d32] rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
+                                <div class="w-14 h-14 bg-[#00a1e0] rounded-xl flex items-center justify-center shadow-md group-hover:scale-105 transition-transform duration-300 flex-shrink-0">
                                     <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                                     </svg>
                                 </div>
 
-                                <h3 class="text-xl font-bold text-[#1b5e20]">
-                                    Mahsül Verim Tahmini
+                                <h3 class="text-xl font-bold text-[#1e3a5f]">
+                                    Hidroelektrik Akış & Potansiyel Tahmini
                                 </h3>
                             </div>
 
                             <p class="text-base text-[#4a6580] leading-relaxed">
-                                Iklim verileri, toprak analizi ve uydu görüntüleriyle desteklenen AI modelleri ile mahsül bazında sezon sonu verim öngörüsü. Erken dönemden itibaren risk faktörlerinin takibi ile hasat planlamasının ve pazarlama stratejilerinin optimizasyonu.
+                                Yağış, kar eritme ve toprak nemi verilerinin entegrasyonuyla havza bazında nehir akış tahminleri. Baraj doluluk oranları ve hidroelektrik santrallerin enerji üretim kapasitesinin 72 saatlik öngörüsü ile su kaynakları yönetiminin optimizasyonu.
                             </p>
                         </div>
                     </div>
@@ -383,29 +411,7 @@
             </div>
         </section>
 
-        <!-- Stats Section -->
-        <section class="py-4" style="background: linear-gradient(135deg, #0d1f0d 0%, #163016 50%, #0d1f0d 100%);">
-            <div class="max-w-7xl mx-auto px-8">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="text-center">
-                        <div class="text-3xl lg:text-4xl font-bold text-[#388e3c] mb-1">10m</div>
-                        <div class="text-sm text-gray-400 font-medium">Toprak Analiz Çözünürlüğü</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl lg:text-4xl font-bold text-[#4caf50] mb-1">7 Gün</div>
-                        <div class="text-sm text-gray-400 font-medium">Yağış Tahmin Süresi</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl lg:text-4xl font-bold text-[#388e3c] mb-1">%40+</div>
-                        <div class="text-sm text-gray-400 font-medium">Su Tasarrufu</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-3xl lg:text-4xl font-bold text-[#4caf50] mb-1">500+</div>
-                        <div class="text-sm text-gray-400 font-medium">Mahsül Türü Destekleni</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- Divider -->
         <div class="relative w-full h-1">
@@ -413,192 +419,6 @@
             <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent" style="width: 60%; left: 20%;"></div>
         </div>
 
-        <!-- Technical Details Section -->
-        <section class="relative py-20 overflow-hidden">
-            <!-- Background Video -->
-            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover">
-                <source src="assets/wheat.mp4" type="video/mp4" />
-            </video>
-            <!-- Overlay -->
-            <div class="absolute inset-0" style="background: rgba(232, 244, 248, 0.15);"></div>
-            <div class="max-w-7xl mx-auto px-8 relative z-10">
-                <div class="text-center mb-16">
-                    <span class="text-white font-semibold text-xs uppercase tracking-wider" style="text-shadow: 0 2px 6px rgba(80,50,20,0.8);">Teknoloji & Metodoloji</span>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-white mt-2 mb-3" style="text-shadow: 0 2px 8px rgba(80,50,20,0.8);">
-                        Tarım Teknoloji Altyapısı
-                    </h2>
-                    <p class="text-white font-semibold text-base max-w-2xl mx-auto" style="text-shadow: 0 2px 6px rgba(80,50,20,0.8);">
-                        Uydu, IoT sensör ve iklim modelleri entegrasyonuyla sahaya özgü tarım karar destek sistemi
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-6 mb-12">
-                    <!-- Detail Item 1 -->
-                    <div class="bg-white rounded-xl p-6 shadow hover:shadow-md transition-all border border-gray-200">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-[#2e7d32] to-[#388e3c] rounded-lg flex items-center justify-center">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-[#1b5e20]">
-                                Toprak & Iklim Analiz Modelleri
-                            </h3>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Uydu görüntüleri ve IoT toprak sensörlerinden elde edilen veri ile tarla bazında toprak nemi, sıcaklık ve besin analizi yapılır. LSTM ve CNN modelleri ile mevsimsel iklim kalıpları öğrenir ve mahsül türüne özgü risk faktörleri öngörülür. Adaptif bias correction ile yerel koşullara uygun tahmin doğruluğu artırılır.
-                        </p>
-                    </div>
-
-                    <!-- Detail Item 2 -->
-                    <div class="bg-white rounded-xl p-6 shadow hover:shadow-md transition-all border border-gray-200">
-                        <div class="flex items-center gap-3 mb-4">
-                            <div class="w-10 h-10 bg-gradient-to-br from-[#388e3c] to-[#2e7d32] rounded-lg flex items-center justify-center">
-                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-[#1b5e20]">
-                                IoT Sensör Ağı & Veri Akışı
-                            </h3>
-                        </div>
-                        <p class="text-sm text-gray-600 leading-relaxed">
-                            Sahada kurulan IoT sensörler gerçek zamanlı toprak nemi, havanın sıcaklık ve nem oranı ile yağış verilerini buluta aktarır. Edge computing ile gecikme minimizasyonu sağlanır; birden fazla tarla verisinin tek arayüzde birleştirilmesi ile çiftçi karar destek paneli oluşturulur.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Application Areas -->
-                <div class="rounded-xl p-8 shadow-lg" style="background: linear-gradient(135deg, #0d1f0d 0%, #163016 100%);">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-[#2e7d32] rounded-lg flex items-center justify-center">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">
-                            Tarım Uygulama Alanları
-                        </h3>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-3">
-                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all">
-                            <div class="w-8 h-8 bg-[#2e7d32]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-[#4caf50]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                            </div>
-                            <span class="text-white text-sm">Mahsül bazında don ve dolu uyarı sistemi</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all">
-                            <div class="w-8 h-8 bg-[#388e3c]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-[#4caf50]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                                </svg>
-                            </div>
-                            <span class="text-white text-sm">Tarla bazında sulama planlama takvimi</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all">
-                            <div class="w-8 h-8 bg-[#2e7d32]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-[#4caf50]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
-                                </svg>
-                            </div>
-                            <span class="text-white text-sm">Sezon sonu mahsül verim öngörüsü</span>
-                        </div>
-                        <div class="flex items-center gap-3 p-3 bg-white/5 rounded-lg hover:bg-white/10 transition-all">
-                            <div class="w-8 h-8 bg-[#388e3c]/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-[#4caf50]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                </svg>
-                            </div>
-                            <span class="text-white text-sm">Hastalık ve zararlı organizma risk analizi</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Divider -->
-        <div class="relative w-full h-1">
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent opacity-30"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-[#4fd1c5] to-transparent" style="width: 60%; left: 20%;"></div>
-        </div>
-
-        <!-- Use Cases Section -->
-        <section class="relative py-20 overflow-hidden" style="background: linear-gradient(135deg, #1b3a1b 0%, #243d24 50%, #1b3a1b 100%);">
-            <!-- Decorative blobs -->
-            <div class="absolute top-0 right-0 w-96 h-96 bg-[#2e7d32]/15 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-0 left-0 w-96 h-96 bg-[#388e3c]/10 rounded-full blur-3xl"></div>
-
-            <div class="max-w-7xl mx-auto px-8 relative z-10">
-                <div class="text-center mb-16">
-                    <span class="text-[#4caf50] font-semibold text-xs uppercase tracking-wider">Tarım Alanları</span>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-white mt-2 mb-3">
-                        Tarım Türüne Özgü Çözümler
-                    </h2>
-                    <p class="text-base text-gray-400 max-w-2xl mx-auto">
-                        Tahıllar, meyve-sebze ve hayvancılık gibi farklı tarım dallarına özelleştirilmiş meteorolojik analiz
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-5 gap-6">
-                    <!-- Left: Big hero card — Tahıl & Buğday -->
-                    <div class="lg:col-span-2 group relative rounded-2xl overflow-hidden flex flex-col items-center justify-center text-center p-7 hover:shadow-xl transition-all duration-300 border border-[#c8e6c9]" style="background: #dcedc8;">
-                        <!-- Icon -->
-                        <div class="relative w-16 h-16 rounded-2xl flex items-center justify-center mb-5 group-hover:scale-105 transition-transform duration-300" style="background: linear-gradient(135deg, #2e7d32, #388e3c); box-shadow: 0 4px 20px rgba(46,125,50,0.4);">
-                            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-[#1b5e20] mb-2">Tahıl & Buğday</h3>
-                        <p class="text-sm text-[#4a6580] leading-relaxed">
-                            Ekimden hasada kadar kritik dönemlerde yağış, sıcaklık ve rüzgar tahminleri ile tahıl veriminin korunma altına alınması
-                        </p>
-                    </div>
-
-                    <!-- Right: Two stacked horizontal cards -->
-                    <div class="lg:col-span-3 flex flex-col gap-6">
-                        <!-- Meyve & Sebze -->
-                        <div class="group relative rounded-2xl overflow-hidden flex items-center gap-6 p-6 hover:shadow-xl transition-all duration-300 border border-[#c8e6c9]" style="background: #dcedc8;">
-                            <!-- Left accent border -->
-                            <div class="absolute top-0 bottom-0 left-0 w-1 bg-gradient-to-b from-[#388e3c] to-[#4caf50]"></div>
-                            <!-- Icon -->
-                            <div class="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300" style="background: linear-gradient(135deg, #388e3c, #4caf50); box-shadow: 0 4px 20px rgba(56,142,60,0.4);">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"></path>
-                                </svg>
-                            </div>
-                            <!-- Text -->
-                            <div>
-                                <h3 class="text-xl font-bold text-[#1b5e20] mb-1">Meyve & Sebze</h3>
-                                <p class="text-sm text-[#4a6580] leading-relaxed">
-                                    Çiçeklenme ve meyve dolma dönemlerinde don ve dolu tehlikesi öngörüsü ile sera ve açık alan koruma stratejileri
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Hayvancılık -->
-                        <div class="group relative rounded-2xl overflow-hidden flex items-center gap-6 p-6 hover:shadow-xl transition-all duration-300 border border-[#c8e6c9]" style="background: #dcedc8;">
-                            <!-- Left accent border -->
-                            <div class="absolute top-0 bottom-0 left-0 w-1 bg-gradient-to-b from-[#2e7d32] to-[#4caf50]"></div>
-                            <!-- Icon -->
-                            <div class="flex-shrink-0 w-16 h-16 rounded-2xl flex items-center justify-center group-hover:scale-105 transition-transform duration-300" style="background: linear-gradient(135deg, #2e7d32, #388e3c); box-shadow: 0 4px 20px rgba(46,125,50,0.4);">
-                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                            </div>
-                            <!-- Text -->
-                            <div>
-                                <h3 class="text-xl font-bold text-[#1b5e20] mb-1">Hayvancılık</h3>
-                                <p class="text-sm text-[#4a6580] leading-relaxed">
-                                    Isı stresi ve ekstrem hava olaylarında hayvan sağlığı ve verimlilik koruması için önceden uyarı ve otomatik yönetim planı
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Divider -->
         <div class="relative w-full h-1">
@@ -621,11 +441,11 @@
                         </div>
 
                         <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-                            Tarım İşletmenizi<br/>Modernize Edelim
+                            Enerji Yatırımınızı<br/>Optimize Edelim
                         </h2>
 
                         <p class="text-gray-300 mb-8 leading-relaxed">
-                            Hassas tarım çözümları, sulama optimizasyonu ve mahsül risk analizi için özel meteorolojik danışmanlık hakkında bizimle iletişime geçin.
+                            Rüzgar, güneş ve hidroelektrik projeleriniz için özel meteorolojik analiz ve lokasyon optimizasyon çözümları hakkında bizimle iletişime geçin.
                         </p>
 
                         <!-- Contact Info -->
@@ -671,7 +491,7 @@
                                     </svg>
                                 </div>
                                 <h3 class="text-2xl font-bold text-gray-900 mb-2">Bizimle İletişime Geçin</h3>
-                                <p class="text-gray-600 text-sm leading-relaxed">Tarım işletmeniz için özel mahsül analizi, sulama planı ve risk yönetimi çözümları hakkında detaylı bilgi almak için formu doldurun.</p>
+                                <p class="text-gray-600 text-sm leading-relaxed">Yenilenebilir enerji projeniz için lokasyon analizi, potansiyel tahmin ve performans optimizasyonu hakkında detaylı bilgi almak için formu doldurun.</p>
                             </div>
 
                             <a href="/index.html#contact" class="group w-full inline-flex items-center justify-center gap-2 bg-[#00a1e0] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#0088c7] hover:shadow-lg transition-all duration-300">
@@ -765,5 +585,91 @@
 
         <script type="module" src="/main.js"></script>
 
+        <!-- Rain Animation Script -->
+        <script>
+            // Wait for DOM to be fully loaded
+            document.addEventListener('DOMContentLoaded', function() {
+                // Rain animation for the canvas
+                const canvas = document.getElementById('rainCanvas');
+                if (!canvas) return;
+
+                const ctx = canvas.getContext('2d');
+
+                // Set canvas size
+                function resizeCanvas() {
+                    const section = canvas.parentElement;
+                    canvas.width = section.offsetWidth;
+                    canvas.height = section.offsetHeight;
+                }
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+
+                // Rain drops array
+                const rainDrops = [];
+                const maxDrops = 100;
+                const windAngle = 15; // Degrees of angle
+
+                // Create rain drop
+                class RainDrop {
+                    constructor() {
+                        this.x = Math.random() * (canvas.width + 200) - 100;
+                        this.y = Math.random() * -canvas.height;
+                        this.length = Math.random() * 25 + 15;
+                        this.speed = Math.random() * 5 + 3;
+                        this.opacity = Math.random() * 0.4 + 0.3;
+                    }
+
+                    fall() {
+                        this.y += this.speed;
+                        this.x += this.speed * 0.3; // Horizontal movement for angle
+
+                        if (this.y > canvas.height) {
+                            this.y = -this.length;
+                            this.x = Math.random() * (canvas.width + 200) - 100;
+                        }
+
+                        // Reset if it goes too far right
+                        if (this.x > canvas.width + 100) {
+                            this.x = -100;
+                        }
+                    }
+
+                    draw() {
+                        ctx.beginPath();
+                        ctx.moveTo(this.x, this.y);
+
+                        // Calculate angled end point
+                        const angleOffset = this.length * 0.3;
+                        ctx.lineTo(this.x + angleOffset, this.y + this.length);
+
+                        // Medium blue rain drops
+                        const color = `rgba(0, 136, 199, ${this.opacity})`; // #0088c7 - matches brand blue
+
+                        ctx.strokeStyle = color;
+                        ctx.lineWidth = 2;
+                        ctx.stroke();
+                    }
+                }
+
+                // Initialize rain drops
+                for (let i = 0; i < maxDrops; i++) {
+                    rainDrops.push(new RainDrop());
+                }
+
+                // Animation loop
+                function animate() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                    rainDrops.forEach(drop => {
+                        drop.fall();
+                        drop.draw();
+                    });
+
+                    requestAnimationFrame(animate);
+                }
+
+                animate();
+            });
+        </script>
     </body>
 </html>
