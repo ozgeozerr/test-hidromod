@@ -1,21 +1,64 @@
 import "./styles.css";
 
 // Language Switcher
-//
-let currentLang = "en";
+let currentLang = "tr";
 
+// Desktop language switcher
 document.querySelectorAll(".lang-btn").forEach((btn) => {
   btn.addEventListener("click", () => {
     currentLang = btn.dataset.lang;
 
-    // Update active state
+    // Update active state for desktop buttons
     document
       .querySelectorAll(".lang-btn")
       .forEach((b) => b.classList.remove("active-lang"));
     btn.classList.add("active-lang");
 
+    // Update mobile buttons too
+    document.querySelectorAll(".lang-btn-mobile").forEach((b) => {
+      if (b.dataset.lang === currentLang) {
+        b.classList.add("bg-[#00a1e0]", "text-white");
+        b.classList.remove("bg-white/10", "hover:bg-white/20");
+      } else {
+        b.classList.remove("bg-[#00a1e0]", "text-white");
+        b.classList.add("bg-white/10", "hover:bg-white/20");
+      }
+    });
+
     // Switch language content (will implement translations later)
     switchLanguage(currentLang);
+  });
+});
+
+// Mobile language switcher
+document.querySelectorAll(".lang-btn-mobile").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    currentLang = btn.dataset.lang;
+
+    // Update active state for mobile buttons
+    document.querySelectorAll(".lang-btn-mobile").forEach((b) => {
+      if (b.dataset.lang === currentLang) {
+        b.classList.add("bg-[#00a1e0]", "text-white");
+        b.classList.remove("bg-white/10", "hover:bg-white/20");
+      } else {
+        b.classList.remove("bg-[#00a1e0]", "text-white");
+        b.classList.add("bg-white/10", "hover:bg-white/20");
+      }
+    });
+
+    // Update desktop buttons too
+    document
+      .querySelectorAll(".lang-btn")
+      .forEach((b) => b.classList.remove("active-lang"));
+    document
+      .querySelector(`.lang-btn[data-lang="${currentLang}"]`)
+      ?.classList.add("active-lang");
+
+    // Switch language content
+    switchLanguage(currentLang);
+    
+    // Close mobile menu after language change
+    document.getElementById("mobile-menu").classList.add("hidden");
   });
 });
 

@@ -10,10 +10,13 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         afet: resolve(__dirname, "afet-tahmini.html"),
         askeri: resolve(__dirname, "askeri-hava-tahmini.html"),
+        uzay: resolve(__dirname, "uzay-meteorolojisi.html"),
+        tarim: resolve(__dirname, "tarim.html"),
         hava: resolve(__dirname, "hava-durumu.html"),
         iklim: resolve(__dirname, "iklim-degisikligi.html"),
         sivil: resolve(__dirname, "sivil-havacilik.html"),
-        yenilenebilir: resolve(__dirname, "yenilenebilir-enerji.html"), // fixed typo
+        yenilenebilir: resolve(__dirname, "yenilenebilir-enerji.html"),
+        iletisim: resolve(__dirname, "iletisim.html"),
       },
     },
     outDir: "dist", // output folder for GitHub Pages / Netlify
