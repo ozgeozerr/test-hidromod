@@ -1,4 +1,12 @@
 import "./styles.css";
+import { getNavbarHTML, getFooterHTML, initNavbar } from "./components.js";
+
+// Inject shared navbar and footer into every page
+const navbarPlaceholder = document.getElementById("navbar-placeholder");
+const footerPlaceholder = document.getElementById("footer-placeholder");
+if (navbarPlaceholder) navbarPlaceholder.innerHTML = getNavbarHTML();
+if (footerPlaceholder) footerPlaceholder.innerHTML = getFooterHTML();
+initNavbar();
 
 // Language Switcher
 let currentLang = "en";
@@ -161,9 +169,9 @@ function switchLanguage(lang) {
   if (videoSource && video) {
     const currentTime = video.currentTime;
     if (lang === 'en') {
-      videoSource.src = 'Hidromod-EN-compressed.mp4';
+      videoSource.src = 'assets/hidromod-en.mp4';
     } else {
-      videoSource.src = 'Hidromod-TR-compressed.mp4';
+      videoSource.src = 'assets/hidromod-tr.mp4';
     }
     video.load();
     video.currentTime = currentTime;
@@ -201,26 +209,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Apply translations
   switchLanguage(currentLang);
-});
-
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-const mobileMenu = document.getElementById("mobile-menu");
-const closeMobileMenu = document.getElementById("mobile-menu-close");
-
-mobileMenuBtn?.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
-
-closeMobileMenu?.addEventListener("click", () => {
-  mobileMenu.classList.add("hidden");
-});
-
-// Close mobile menu when clicking outside
-mobileMenu?.addEventListener("click", (e) => {
-  if (e.target === mobileMenu) {
-    mobileMenu.classList.add("hidden");
-  }
 });
 
 // Smooth scrolling for anchor links
