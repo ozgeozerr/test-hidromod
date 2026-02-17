@@ -140,7 +140,8 @@ document.querySelectorAll(".lang-btn-mobile").forEach((btn) => {
     switchLanguage(currentLang);
 
     // Close mobile menu after language change
-    document.getElementById("mobile-menu")?.classList.add("hidden");
+    const mobileMenuEl = document.getElementById("mobile-menu");
+    if (mobileMenuEl) mobileMenuEl.style.display = "none";
   });
 });
 
@@ -169,9 +170,9 @@ function switchLanguage(lang) {
   if (videoSource && video) {
     const currentTime = video.currentTime;
     if (lang === 'en') {
-      videoSource.src = 'assets/hidromod-en.mp4';
+      videoSource.src = '/hidromod-en.mp4';
     } else {
-      videoSource.src = 'assets/hidromod-tr.mp4';
+      videoSource.src = '/hidromod-tr.mp4';
     }
     video.load();
     video.currentTime = currentTime;

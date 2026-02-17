@@ -182,7 +182,8 @@ export function getNavbarHTML() {
 <!-- Mobile Menu -->
 <div
     id="mobile-menu"
-    class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40 hidden"
+    class="fixed inset-0 bg-black/70 backdrop-blur-sm z-40"
+    style="display:none"
 >
     <div
         class="bg-gradient-to-br from-[#141d39] to-[#0f1729] w-full max-w-sm ml-auto h-full overflow-y-auto"
@@ -495,14 +496,14 @@ export function initNavbar() {
 
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener("click", () => {
-      mobileMenu.classList.remove("hidden");
+      mobileMenu.style.display = "";
       document.body.style.overflow = "hidden";
     });
   }
 
   if (mobileMenuClose && mobileMenu) {
     mobileMenuClose.addEventListener("click", () => {
-      mobileMenu.classList.add("hidden");
+      mobileMenu.style.display = "none";
       document.body.style.overflow = "";
     });
   }
@@ -510,7 +511,7 @@ export function initNavbar() {
   if (mobileMenu) {
     mobileMenu.addEventListener("click", (e) => {
       if (e.target === mobileMenu) {
-        mobileMenu.classList.add("hidden");
+        mobileMenu.style.display = "none";
         document.body.style.overflow = "";
       }
     });
