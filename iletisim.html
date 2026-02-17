@@ -7,7 +7,10 @@
         <link rel="icon" type="image/png" href="/hidromod_logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="/styles.css" />
         <style>
             @keyframes fadeInUp {
@@ -41,493 +44,553 @@
             }
         </style>
     </head>
-    <body style="background-color: #f8f9fa !important;">
-
-    <!-- Navbar -->
-    <nav
-        class="fixed top-0 left-0 right-0 z-50"
-        style="
-            background: rgba(20, 29, 57, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 161, 224, 0.2);
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
-        "
-    >
-        <div
-            class="max-w-7xl mx-auto px-8 py-3.5 flex items-center justify-between"
+    <body style="background-color: #f8f9fa !important">
+        <!-- Navbar -->
+        <nav
+            class="fixed top-0 left-0 right-0 z-50"
+            style="
+                background: rgba(20, 29, 57, 0.85);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                border-bottom: 1px solid rgba(0, 161, 224, 0.2);
+                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+            "
         >
-            <!-- Logo -->
-            <div class="flex items-center gap-4">
-                <img
-                    src="/hidromod_logo.png"
-                    alt="Hidromod Logo"
-                    class="h-12 w-auto"
-                />
-                <div
-                    class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-3.5"
-                >
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between"
+            >
+                <!-- Logo -->
+                <div class="flex items-center gap-2 sm:gap-4">
+                    <img
+                        src="/hidromod_logo.png"
+                        alt="Hidromod Logo"
+                        class="h-10 sm:h-12 w-auto"
+                    />
                     <div
-                        class="text-lg font-bold leading-none tracking-tight text-white"
+                        class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-2 sm:pl-3.5"
                     >
-                        <span>HIDRO</span><span>MOD</span>
+                        <div
+                            class="text-sm sm:text-lg font-bold leading-none tracking-tight text-white"
+                        >
+                            <span>HIDRO</span><span>MOD</span>
+                        </div>
+                        <p
+                            class="text-[8px] sm:text-[10px] text-gray-300 mt-1 leading-tight max-w-[120px] sm:max-w-[180px]"
+                            data-i18n="companySubtitle"
+                        >
+                            Hidrometeorolojik Tahmin & Analiz Merkezi
+                        </p>
                     </div>
-                    <p
-                        class="text-[10px] text-gray-300 mt-1 leading-tight max-w-[180px]"
+                </div>
+
+                <!-- Navigation Items & Actions -->
+                <div class="flex items-center gap-6 lg:gap-12 ml-auto">
+                    <!-- Navigation Links -->
+                    <nav class="hidden lg:flex items-center gap-8 lg:gap-10">
+                        <!-- Home -->
+                        <a
+                            href="/"
+                            class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
+                            data-i18n="home"
+                        >
+                            Ana Sayfa
+                            <span
+                                class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"
+                            ></span>
+                        </a>
+
+                        <!-- Solutions Dropdown -->
+                        <div class="relative group">
+                            <button
+                                class="text-white hover:text-[#00a1e0] transition-all duration-200 flex items-center gap-1.5 font-medium text-sm relative"
+                            >
+                                <span data-i18n="solutions">Çözümler</span>
+                                <svg
+                                    class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="2.5"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M19 9l-7 7-7-7"
+                                    ></path>
+                                </svg>
+                            </button>
+                            <!-- Dropdown Menu -->
+                            <div
+                                class="absolute top-full left-0 mt-3 w-64 lg:w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
+                            >
+                                <a
+                                    href="/askeri-hava-tahmini.html"
+                                    class="block px-4 lg:px-6 py-2.5 lg:py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium text-sm lg:text-base"
+                                    data-i18n="militaryWeather"
+                                    >Askeri Hava Tahmini
+                                </a>
+
+                                <a
+                                    href="/sivil-havacilik.html"
+                                    class="block px-4 lg:px-6 py-2.5 lg:py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium text-sm lg:text-base"
+                                    data-i18n="civilAviation"
+                                    >Sivil Havacılık</a
+                                >
+
+                                <a
+                                    href="/uzay-meteorolojisi.html"
+                                    class="block px-4 lg:px-6 py-2.5 lg:py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium text-sm lg:text-base"
+                                    data-i18n="spaceMeteorology"
+                                    >Uzay Meteorolojisi</a
+                                >
+                                <a
+                                    href="/hava-durumu.html"
+                                    class="block px-4 lg:px-6 py-2.5 lg:py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] first:rounded-t-xl font-medium"
+                                    data-i18n="weather"
+                                    >Hava Durumu</a
+                                >
+
+                                <a
+                                    href="/yenilenebilir-enerji.html"
+                                    class="block px-4 lg:px-6 py-2.5 lg:py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium text-sm lg:text-base"
+                                    data-i18n="renewableEnergy"
+                                    >Yenilenebilir Enerji</a
+                                >
+                                <a
+                                    href="/tarim.html"
+                                    class="block px-4 lg:px-6 py-2.5 lg:py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium text-sm lg:text-base"
+                                    data-i18n="agriculture"
+                                    >Tarım</a
+                                >
+                                <a
+                                    href="/afet-tahmini.html"
+                                    class="block px-4 lg:px-6 py-2.5 lg:py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium text-sm lg:text-base"
+                                    data-i18n="disasterRisk"
+                                    >Afet Riski ve Tahmini</a
+                                >
+                                <a
+                                    href="/iklim-degisikligi.html"
+                                    class="block px-4 lg:px-6 py-2.5 lg:py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] last:rounded-b-xl font-medium"
+                                    data-i18n="climateChange"
+                                    >İklim Değişikliği Simülasyonları</a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Contact Us Button -->
+                        <a
+                            href="/iletisim.html"
+                            class="relative bg-gradient-to-r from-[#00a1e0] to-[#0088c7] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-[#00a1e0]/30 transition-all duration-300 hover:scale-105"
+                            data-i18n="contact"
+                        >
+                            İletişim
+                        </a>
+                    </nav>
+
+                    <!-- Language Switcher -->
+                    <div
+                        class="flex items-center gap-1 bg-white/5 backdrop-blur-sm border border-[#00a1e0]/30 rounded-lg p-1"
                     >
-                        Hidrometeorolojik Tahmin & Analiz Merkezi
+                        <button
+                            class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-2 lg:px-3 py-1.5 rounded-md transition-all duration-200 active-lang"
+                            data-lang="en"
+                        >
+                            EN
+                        </button>
+                        <button
+                            class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-2 lg:px-3 py-1.5 rounded-md transition-all duration-200"
+                            data-lang="tr"
+                        >
+                            TR
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-white p-2" id="mobile-menu-btn">
+                    <svg
+                        class="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"
+                        ></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="pt-32 pb-16 px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center animate-fade-in-up">
+                    <h1
+                        class="text-5xl md:text-6xl font-bold text-gray-900 mb-6"
+                        data-i18n="contactFormTitle"
+                    >
+                        Bize <span class="text-[#00a1e0]">Ulaşın</span>
+                    </h1>
+                    <p
+                        class="text-xl text-gray-600 max-w-3xl mx-auto"
+                        data-i18n="contactSubtitle"
+                    >
+                        Hidrometeorolojik tahmin ve analiz çözümlerimiz hakkında
+                        detaylı bilgi almak için bizimle iletişime geçin.
                     </p>
                 </div>
             </div>
+        </section>
 
-            <!-- Navigation Items & Actions -->
-            <div class="flex items-center gap-12 ml-auto">
-                <!-- Navigation Links -->
-                <nav class="hidden lg:flex items-center gap-10">
-                    <!-- Home -->
-                    <a
-                        href="/"
-                        class="text-white hover:text-[#00a1e0] transition-all duration-200 font-medium text-sm relative group"
+        <!-- Contact Content Section -->
+        <section class="py-16 px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Information -->
+                    <div
+                        class="space-y-8 animate-fade-in-up"
+                        style="animation-delay: 0.2s"
                     >
-                        Ana Sayfa
-                        <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00a1e0] to-[#4fd1c5] group-hover:w-full transition-all duration-300"
-                        ></span>
-                    </a>
-
-                    <!-- Solutions Dropdown -->
-                    <div class="relative group">
-                        <button
-                            class="text-white hover:text-[#00a1e0] transition-all duration-200 flex items-center gap-1.5 font-medium text-sm relative"
+                        <!-- Email Card -->
+                        <div
+                            class="bg-gradient-to-br from-[#1a2847] to-[#141d39] border border-[#00a1e0]/30 rounded-2xl p-8 hover:border-[#00a1e0]/50 transition-all duration-300"
                         >
-                            <span>Çözümler</span>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-[#00a1e0]"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3
+                                        class="text-white font-semibold text-lg mb-2"
+                                        data-i18n="email"
+                                    >
+                                        E-posta
+                                    </h3>
+                                    <p class="text-gray-400 text-sm mb-4">
+                                        Sorularınız için bize e-posta gönderin
+                                    </p>
+                                    <a
+                                        href="#"
+                                        id="email-link"
+                                        class="text-[#00a1e0] hover:text-[#4fd1c5] transition-colors duration-200 font-medium"
+                                    >
+                                        E-posta Gönder
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address Card -->
+                        <div
+                            class="bg-gradient-to-br from-[#1a2847] to-[#141d39] border border-[#00a1e0]/30 rounded-2xl p-8 hover:border-[#00a1e0]/50 transition-all duration-300"
+                        >
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center"
+                                >
+                                    <svg
+                                        class="w-6 h-6 text-[#00a1e0]"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                        ></path>
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3
+                                        class="text-white font-semibold text-lg mb-2"
+                                    >
+                                        Adres
+                                    </h3>
+                                    <p class="text-gray-300 leading-relaxed">
+                                        ODTÜ Teknokent<br />
+                                        Çankaya, Ankara, Türkiye
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Contact Button -->
+                        <button
+                            id="contact-btn"
+                            class="w-full bg-gradient-to-r from-[#00a1e0] to-[#0088c7] text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-[#00a1e0]/30 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-3"
+                        >
                             <svg
-                                class="w-4 h-4 group-hover:rotate-180 transition-transform duration-300"
+                                class="w-6 h-6"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
-                                stroke-width="2.5"
                             >
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
-                                    d="M19 9l-7 7-7-7"
+                                    stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                                 ></path>
                             </svg>
+                            Bize Ulaşın
                         </button>
-                        <!-- Dropdown Menu -->
-                        <div
-                            class="absolute top-full left-0 mt-3 w-72 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100"
-                        >
-                            <a
-                                href="/askeri-hava-tahmini.html"
-                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                >Askeri Hava Tahmini
-                            </a>
-
-                            <a
-                                href="/sivil-havacilik.html"
-                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                >Sivil Havacılık</a
-                            >
-
-                            <a
-                                href="/uzay-meteorolojisi.html"
-                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                >Uzay Meteorolojisi</a
-                            >
-                            <a
-                                href="/hava-durumu.html"
-                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] first:rounded-t-xl font-medium"
-                                >Hava Durumu</a
-                            >
-
-                            <a
-                                href="/yenilenebilir-enerji.html"
-                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                >Yenilenebilir Enerji</a
-                            >
-                            <a
-                                href="/tarim.html"
-                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                >Tarım</a
-                            >
-                            <a
-                                href="/afet-tahmini.html"
-                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] font-medium"
-                                >Afet Riski ve Tahmini</a
-                            >
-                            <a
-                                href="/iklim-degisikligi.html"
-                                class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-[#00a1e0] last:rounded-b-xl font-medium"
-                                >İklim Değişikliği Simülasyonları</a
-                            >
-                        </div>
                     </div>
 
-
-                    <!-- Contact Us Button -->
-                    <a
-                        href="/iletisim.html"
-                        class="relative bg-gradient-to-r from-[#00a1e0] to-[#0088c7] text-white px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-lg hover:shadow-[#00a1e0]/30 transition-all duration-300 hover:scale-105"
+                    <!-- Google Maps -->
+                    <div
+                        class="animate-fade-in-up"
+                        style="animation-delay: 0.4s"
                     >
-                        İletişim
-                    </a>
-                </nav>
+                        <div class="map-container">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.9384668865394!2d32.778688876295376!3d39.89095019428944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f25e8f83977%3A0x4c8fbd421d9cb111!2zT0RUw5wgVGVrbm9rZW50!5e0!3m2!1sen!2str!4v1707573700000!5m2!1sen!2str"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+                        <p class="text-gray-400 text-sm mt-4 text-center">
+                            Haritada konumumuzu görüntüleyebilirsiniz
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <!-- Language Switcher -->
+        <!-- Footer -->
+        <footer
+            class="relative bg-gradient-to-br from-[#0a0f1a] via-[#0f1420] to-[#141d39] border-t border-[#00a1e0]/20"
+        >
+            <div class="max-w-7xl mx-auto px-4 md:px-8 py-6 md:py-10">
                 <div
-                    class="flex items-center gap-1 bg-white/5 backdrop-blur-sm border border-[#00a1e0]/30 rounded-lg p-1"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-6 md:mb-8"
                 >
-                    <button
-                        class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-3 py-1.5 rounded-md transition-all duration-200 active-lang"
-                        data-lang="en"
-                    >
-                        EN
-                    </button>
-                    <button
-                        class="lang-btn text-white hover:bg-[#00a1e0] font-semibold text-xs px-3 py-1.5 rounded-md transition-all duration-200"
-                        data-lang="tr"
-                    >
-                        TR
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-white" id="mobile-menu-btn">
-                <svg
-                    class="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                >
-                    <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"
-                    ></path>
-                </svg>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="pt-32 pb-16 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center animate-fade-in-up">
-                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                    Bize <span class="text-[#00a1e0]">Ulaşın</span>
-                </h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Hidrometeorolojik tahmin ve analiz çözümlerimiz hakkında detaylı bilgi almak için bizimle iletişime geçin.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Content Section -->
-    <section class="py-16 px-8">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Contact Information -->
-                <div class="space-y-8 animate-fade-in-up" style="animation-delay: 0.2s;">
-                    <!-- Email Card -->
-                    <div class="bg-gradient-to-br from-[#1a2847] to-[#141d39] border border-[#00a1e0]/30 rounded-2xl p-8 hover:border-[#00a1e0]/50 transition-all duration-300">
-                        <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-[#00a1e0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                                </svg>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-white font-semibold text-lg mb-2">E-posta</h3>
-                                <p class="text-gray-400 text-sm mb-4">Sorularınız için bize e-posta gönderin</p>
-                                <a
-                                    href="#"
-                                    id="email-link"
-                                    class="text-[#00a1e0] hover:text-[#4fd1c5] transition-colors duration-200 font-medium"
-                                >
-                                    E-posta Gönder
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Address Card -->
-                    <div class="bg-gradient-to-br from-[#1a2847] to-[#141d39] border border-[#00a1e0]/30 rounded-2xl p-8 hover:border-[#00a1e0]/50 transition-all duration-300">
-                        <div class="flex items-start gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center">
-                                <svg class="w-6 h-6 text-[#00a1e0]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                </svg>
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="text-white font-semibold text-lg mb-2">Adres</h3>
-                                <p class="text-gray-300 leading-relaxed">
-                                    ODTÜ Teknokent<br>
-                                    Çankaya, Ankara, Türkiye
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Button -->
-                    <button
-                        id="contact-btn"
-                        class="w-full bg-gradient-to-r from-[#00a1e0] to-[#0088c7] text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-lg hover:shadow-[#00a1e0]/30 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-3"
-                    >
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                        </svg>
-                        Bize Ulaşın
-                    </button>
-                </div>
-
-                <!-- Google Maps -->
-                <div class="animate-fade-in-up" style="animation-delay: 0.4s;">
-                    <div class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3061.9384668865394!2d32.778688876295376!3d39.89095019428944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34f25e8f83977%3A0x4c8fbd421d9cb111!2zT0RUw5wgVGVrbm9rZW50!5e0!3m2!1sen!2str!4v1707573700000!5m2!1sen!2str"
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                        ></iframe>
-                    </div>
-                    <p class="text-gray-400 text-sm mt-4 text-center">
-                        Haritada konumumuzu görüntüleyebilirsiniz
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer
-        class="relative bg-gradient-to-br from-[#0a0f1a] via-[#0f1420] to-[#141d39] border-t border-[#00a1e0]/20"
-    >
-        <div class="max-w-7xl mx-auto px-8 py-10">
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8"
-            >
-                <!-- Company Info -->
-                <div class="lg:col-span-2">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img
-                            src="/hidromod_logo.png"
-                            alt="Hidromod Logo"
-                            class="h-14 w-auto"
-                        />
+                    <!-- Company Info -->
+                    <div class="lg:col-span-2">
                         <div
-                            class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-3.5"
+                            class="flex items-center gap-3 md:gap-4 mb-4 md:mb-6"
                         >
+                            <img
+                                src="/hidromod_logo.png"
+                                alt="Hidromod Logo"
+                                class="h-10 md:h-14 w-auto"
+                            />
                             <div
-                                class="text-xl font-bold leading-none tracking-tight text-white"
+                                class="flex flex-col border-l-2 border-[#00a1e0]/60 pl-2 sm:pl-3.5"
                             >
-                                <span>HIDRO</span><span>MOD</span>
-                            </div>
-                            <p
-                                class="text-[11px] text-gray-400 mt-1 leading-tight max-w-[200px]"
-                            >
-                                Hidrometeorolojik Tahmin & Analiz Merkezi
-                            </p>
-                        </div>
-                    </div>
-                    <p
-                        class="text-gray-400 leading-relaxed mb-4 max-w-md text-sm"
-                    >
-                        Geleceği doğru verilerle şekillendiriyoruz. Yüksek
-                        çözünürlüklü hidrometeorolojik tahmin ve analiz
-                        hizmetleri.
-                    </p>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">
-                        Hızlı Erişim
-                    </h3>
-                    <ul class="space-y-3">
-                        <li>
-                            <a
-                                href="/"
-                                class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"
-                            >
-                                <span
-                                    class="w-1 h-1 bg-[#00a1e0] rounded-full"
-                                ></span>
-                                Ana Sayfa
-                            </a>
-                        </li>
-                        <li>
-                            <a
-                                href="/#services"
-                                class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 flex items-center gap-2"
-                            >
-                                <span
-                                    class="w-1 h-1 bg-[#00a1e0] rounded-full"
-                                ></span>
-                                Çözümlerimiz
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Contact Info -->
-                <div>
-                    <h3 class="text-white font-bold text-lg mb-4">
-                        İletişim
-                    </h3>
-                    <div class="space-y-4">
-                        <!-- Address -->
-                        <div class="flex items-start gap-3">
-                            <div
-                                class="w-10 h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"
-                            >
-                                <svg
-                                    class="w-5 h-5 text-[#00a1e0]"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
+                                <div
+                                    class="text-lg md:text-xl font-bold leading-none tracking-tight text-white"
                                 >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                                    ></path>
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div>
+                                    <span>HIDRO</span><span>MOD</span>
+                                </div>
                                 <p
-                                    class="text-gray-400 text-sm leading-relaxed"
+                                    class="text-[10px] md:text-[11px] text-gray-400 mt-1 leading-tight max-w-[200px]"
+                                    data-i18n="companySubtitle"
                                 >
-                                    Mustafa Kemal Mah., Dumlupınar Bulv.,<br />
-                                    280/G, No:1260, ODTÜ TEKNOKENT,<br />
-                                    Çankaya, Ankara / Türkiye
+                                    Hidrometeorolojik Tahmin & Analiz Merkezi
                                 </p>
                             </div>
                         </div>
+                        <p
+                            class="text-gray-400 leading-relaxed mb-3 md:mb-4 max-w-md text-xs md:text-sm"
+                        >
+                            Geleceği doğru verilerle şekillendiriyoruz. Yüksek
+                            çözünürlüklü hidrometeorolojik tahmin ve analiz
+                            hizmetleri.
+                        </p>
+                    </div>
 
-                        <!-- Email -->
-                        <div class="flex items-start gap-3">
-                            <div
-                                class="w-10 h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                    <!-- Contact Info -->
+                    <div>
+                        <h3
+                            class="text-white font-bold text-base md:text-lg mb-3 md:mb-4"
+                            data-i18n="contactInfo"
+                        >
+                            İletişim
+                        </h3>
+                        <div class="space-y-3 md:space-y-4">
+                            <!-- Address -->
+                            <div class="flex items-start gap-2 md:gap-3">
+                                <div
+                                    class="w-8 h-8 md:w-10 md:h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1"
+                                >
+                                    <svg
+                                        class="w-5 h-5 text-[#00a1e0]"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                        ></path>
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-gray-400 text-xs md:text-sm leading-relaxed"
+                                    >
+                                        Mustafa Kemal Mah., Dumlupınar Bulv.,<br />
+                                        280/G, No:1260, ODTÜ TEKNOKENT,<br />
+                                        Çankaya, Ankara / Türkiye
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-2 md:gap-3">
+                                <div
+                                    class="w-8 h-8 md:w-10 md:h-10 bg-[#00a1e0]/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                                >
+                                    <svg
+                                        class="w-5 h-5 text-[#00a1e0]"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        ></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <a
+                                        href="#"
+                                        id="footer-email-link"
+                                        class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-xs md:text-sm"
+                                    >
+                                        info@hidromod.com.tr
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="pt-4 md:pt-6 border-t border-[#00a1e0]/20">
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4"
+                    >
+                        <div
+                            class="text-gray-400 text-xs md:text-sm"
+                            data-i18n="copyright"
+                        >
+                            © 2018 HIDROMOD. Tüm hakları saklıdır.
+                        </div>
+                        <div class="flex items-center gap-4 md:gap-6">
+                            <a
+                                href="#"
+                                class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-xs md:text-sm"
+                                data-i18n="privacyPolicy"
                             >
-                                <svg
-                                    class="w-5 h-5 text-[#00a1e0]"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <div>
-                                <a
-                                    href="#"
-                                    id="footer-email-link"
-                                    class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm"
-                                >
-                                    info@hidromod.com.tr
-                                </a>
-                            </div>
+                                Gizlilik Politikası
+                            </a>
+                            <a
+                                href="#"
+                                class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-xs md:text-sm"
+                                data-i18n="termsOfUse"
+                            >
+                                Kullanım Koşulları
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bottom Bar -->
-            <div class="pt-6 border-t border-[#00a1e0]/20">
-                <div
-                    class="flex flex-col md:flex-row justify-between items-center gap-4"
-                >
-                    <div class="text-gray-400 text-sm">
-                        © 2018 HIDROMOD. Tüm hakları saklıdır.
-                    </div>
-                    <div class="flex items-center gap-6">
-                        <a
-                            href="#"
-                            class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm"
-                        >
-                            Gizlilik Politikası
-                        </a>
-                        <a
-                            href="#"
-                            class="text-gray-400 hover:text-[#00a1e0] transition-colors duration-200 text-sm"
-                        >
-                            Kullanım Koşulları
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <!-- Decorative Elements -->
+            <div
+                class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#00a1e0] to-transparent opacity-50"
+            ></div>
+        </footer>
 
-        <!-- Decorative Elements -->
-        <div
-            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#00a1e0] to-transparent opacity-50"
-        ></div>
-    </footer>
-
-    <script>
-        // Email obfuscation to prevent spam
-        function getEmail() {
-            const user = 'info';
-            const domain = 'hidromod';
-            const tld = 'com.tr';
-            return user + '@' + domain + '.' + tld;
-        }
-
-        // Set up email links on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            const emailLink = document.getElementById('email-link');
-            const footerEmailLink = document.getElementById('footer-email-link');
-            const contactBtn = document.getElementById('contact-btn');
-
-            const email = getEmail();
-            const mailtoLink = 'mailto:' + email;
-
-            if (emailLink) {
-                emailLink.href = mailtoLink;
+        <script>
+            // Email obfuscation to prevent spam
+            function getEmail() {
+                const user = "info";
+                const domain = "hidromod";
+                const tld = "com.tr";
+                return user + "@" + domain + "." + tld;
             }
-            if (footerEmailLink) {
-                footerEmailLink.href = mailtoLink;
-            }
-            if (contactBtn) {
-                contactBtn.addEventListener('click', function() {
-                    window.location.href = mailtoLink;
+
+            // Set up email links on page load
+            document.addEventListener("DOMContentLoaded", function () {
+                const emailLink = document.getElementById("email-link");
+                const footerEmailLink =
+                    document.getElementById("footer-email-link");
+                const contactBtn = document.getElementById("contact-btn");
+
+                const email = getEmail();
+                const mailtoLink = "mailto:" + email;
+
+                if (emailLink) {
+                    emailLink.href = mailtoLink;
+                }
+                if (footerEmailLink) {
+                    footerEmailLink.href = mailtoLink;
+                }
+                if (contactBtn) {
+                    contactBtn.addEventListener("click", function () {
+                        window.location.href = mailtoLink;
+                    });
+                }
+            });
+
+            // Language switcher
+            document.querySelectorAll(".lang-btn").forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    document
+                        .querySelectorAll(".lang-btn")
+                        .forEach((b) =>
+                            b.classList.remove("active-lang", "bg-[#00a1e0]"),
+                        );
+                    this.classList.add("active-lang", "bg-[#00a1e0]");
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener("click", function () {
+                    alert("Mobile menu functionality to be implemented");
                 });
             }
-        });
-
-        // Language switcher
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active-lang', 'bg-[#00a1e0]'));
-                this.classList.add('active-lang', 'bg-[#00a1e0]');
-            });
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', function() {
-                alert('Mobile menu functionality to be implemented');
-            });
-        }
-    </script>
-
+        </script>
     </body>
 </html>

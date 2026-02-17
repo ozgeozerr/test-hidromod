@@ -1,7 +1,81 @@
 import "./styles.css";
 
 // Language Switcher
-let currentLang = "tr";
+let currentLang = "en";
+
+// Translations object
+const translations = {
+  en: {
+    // Navbar
+    home: "Home",
+    solutions: "Solutions",
+    contact: "Contact",
+
+    // Solutions dropdown
+    militaryWeather: "Military Weather Forecast",
+    civilAviation: "Civil Aviation",
+    spaceMeteorology: "Space Meteorology",
+    weather: "Weather",
+    renewableEnergy: "Renewable Energy",
+    agriculture: "Agriculture",
+    disasterRisk: "Disaster Risk and Forecast",
+    climateChange: "Climate Change Simulations",
+
+    // Footer
+    contactInfo: "Contact",
+    footerTagline: "Shaping the future with accurate data. High-resolution hydrometeorological forecasting and analysis services.",
+    privacyPolicy: "Privacy Policy",
+    termsOfUse: "Terms of Use",
+    copyright: "© 2026 HIDROMOD. All rights reserved.",
+    companySubtitle: "Hydrometeorological Forecasting & Analysis Center",
+
+    // Contact page
+    contactTitle: "Contact Us",
+    contactSubtitle: "Get in touch with us for professional meteorological solutions and consultancy services.",
+    fullName: "Full Name",
+    emailAddress: "Email Address",
+    phoneNumber: "Phone Number",
+    subject: "Subject",
+    message: "Message",
+    send: "Send",
+    contactFormTitle: "Contact Form"
+  },
+  tr: {
+    // Navbar
+    home: "Ana Sayfa",
+    solutions: "Çözümler",
+    contact: "İletişim",
+
+    // Solutions dropdown
+    militaryWeather: "Askeri Hava Tahmini",
+    civilAviation: "Sivil Havacılık",
+    spaceMeteorology: "Uzay Meteorolojisi",
+    weather: "Hava Durumu",
+    renewableEnergy: "Yenilenebilir Enerji",
+    agriculture: "Tarım",
+    disasterRisk: "Afet Riski ve Tahmini",
+    climateChange: "İklim Değişikliği Simülasyonları",
+
+    // Footer
+    contactInfo: "İletişim",
+    footerTagline: "Geleceği doğru verilerle şekillendiriyoruz. Yüksek çözünürlüklü hidrometeorolojik tahmin ve analiz hizmetleri.",
+    privacyPolicy: "Gizlilik Politikası",
+    termsOfUse: "Kullanım Koşulları",
+    copyright: "© 2026 HIDROMOD. Tüm hakları saklıdır.",
+    companySubtitle: "Hidrometeorolojik Tahmin & Analiz Merkezi",
+
+    // Contact page
+    contactTitle: "Bizimle İletişime Geçin",
+    contactSubtitle: "Projeleriniz için profesyonel meteorolojik çözümler ve danışmanlık hizmetlerimiz hakkında detaylı bilgi almak için formu doldurun.",
+    fullName: "Ad Soyad",
+    emailAddress: "E-posta Adresi",
+    phoneNumber: "Telefon Numarası",
+    subject: "Konu",
+    message: "Mesajınız",
+    send: "Gönder",
+    contactFormTitle: "İletişim Formu"
+  }
+};
 
 // Desktop language switcher
 document.querySelectorAll(".lang-btn").forEach((btn) => {
@@ -25,7 +99,7 @@ document.querySelectorAll(".lang-btn").forEach((btn) => {
       }
     });
 
-    // Switch language content (will implement translations later)
+    // Switch language content
     switchLanguage(currentLang);
   });
 });
@@ -56,24 +130,86 @@ document.querySelectorAll(".lang-btn-mobile").forEach((btn) => {
 
     // Switch language content
     switchLanguage(currentLang);
-    
+
     // Close mobile menu after language change
-    document.getElementById("mobile-menu").classList.add("hidden");
+    document.getElementById("mobile-menu")?.classList.add("hidden");
   });
 });
 
 function switchLanguage(lang) {
-  // Language switching logic will be implemented here
+  const t = translations[lang];
+
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (t[key]) {
+      element.innerHTML = t[key];
+    }
+  });
+
+  // Update placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    if (t[key]) {
+      element.placeholder = t[key];
+    }
+  });
+
+  // Switch video on index page
+  const videoSource = document.getElementById('intro-video-source');
+  const video = document.getElementById('intro-video');
+  if (videoSource && video) {
+    const currentTime = video.currentTime;
+    if (lang === 'en') {
+      videoSource.src = 'Hidromod-EN-compressed.mp4';
+    } else {
+      videoSource.src = 'Hidromod-TR-compressed.mp4';
+    }
+    video.load();
+    video.currentTime = currentTime;
+  }
+
+  // Save language preference
+  localStorage.setItem('preferredLanguage', lang);
+
   console.log("Switched to:", lang);
 }
+
+// Load saved language preference on page load
+window.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('preferredLanguage') || 'en';
+  currentLang = savedLang;
+
+  // Update button states
+  document.querySelectorAll(".lang-btn").forEach((b) => {
+    if (b.dataset.lang === currentLang) {
+      b.classList.add("active-lang");
+    } else {
+      b.classList.remove("active-lang");
+    }
+  });
+
+  document.querySelectorAll(".lang-btn-mobile").forEach((b) => {
+    if (b.dataset.lang === currentLang) {
+      b.classList.add("bg-[#00a1e0]", "text-white");
+      b.classList.remove("bg-white/10", "hover:bg-white/20");
+    } else {
+      b.classList.remove("bg-[#00a1e0]", "text-white");
+      b.classList.add("bg-white/10", "hover:bg-white/20");
+    }
+  });
+
+  // Apply translations
+  switchLanguage(currentLang);
+});
 
 // Mobile Menu Toggle
 const mobileMenuBtn = document.getElementById("mobile-menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
-const closeMobileMenu = document.getElementById("close-mobile-menu");
+const closeMobileMenu = document.getElementById("mobile-menu-close");
 
 mobileMenuBtn?.addEventListener("click", () => {
-  mobileMenu.classList.remove("hidden");
+  mobileMenu.classList.toggle("hidden");
 });
 
 closeMobileMenu?.addEventListener("click", () => {
