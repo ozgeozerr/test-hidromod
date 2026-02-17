@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://hidromod.netlify.app/</loc>
+        <loc>https://www.hidromod.com.tr/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/hava-durumu.html</loc>
+        <loc>https://www.hidromod.com.tr/hava-durumu.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/sivil-havacilik.html</loc>
+        <loc>https://www.hidromod.com.tr/sivil-havacilik.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/askeri-hava-tahmini.html</loc>
+        <loc>https://www.hidromod.com.tr/askeri-hava-tahmini.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/yenilenebilir-enerji.html</loc>
+        <loc>https://www.hidromod.com.tr/yenilenebilir-enerji.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/tarim.html</loc>
+        <loc>https://www.hidromod.com.tr/tarim.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/afet-tahmini.html</loc>
+        <loc>https://www.hidromod.com.tr/afet-tahmini.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/iklim-degisikligi.html</loc>
+        <loc>https://www.hidromod.com.tr/iklim-degisikligi.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/uzay-meteorolojisi.html</loc>
+        <loc>https://www.hidromod.com.tr/uzay-meteorolojisi.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://hidromod.netlify.app/iletisim.html</loc>
+        <loc>https://www.hidromod.com.tr/iletisim.html</loc>
         <changefreq>yearly</changefreq>
         <priority>0.5</priority>
     </url>
